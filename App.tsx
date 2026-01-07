@@ -124,7 +124,7 @@ const App: React.FC = () => {
             </button>
             
             <div className="text-center mb-10">
-              <h1 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">Verifica si tu clínica califica o consultorio califica</h1>
+              <h1 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">Descubre si tu clínica o consultorio califica</h1>
               <p className="text-gray-400 max-w-lg mx-auto leading-relaxed">
                 Llena tus datos y te contactaremos en breve.
               </p>
