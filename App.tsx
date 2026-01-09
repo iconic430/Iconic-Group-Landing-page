@@ -1,23 +1,20 @@
-
 import React, { useState, useCallback } from 'react';
-import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { Problem } from './components/Problem';
-import { Solution } from './components/Solution';
-import { Benefits } from './components/Benefits';
-import { SocialProof } from './components/SocialProof';
-import { Footer } from './components/Footer';
-import { TriageForm } from './components/TriageForm';
+import { Navbar } from './components/Navbar.tsx';
+import { Hero } from './components/Hero.tsx';
+import { Problem } from './components/Problem.tsx';
+import { Solution } from './components/Solution.tsx';
+import { Benefits } from './components/Benefits.tsx';
+import { SocialProof } from './components/SocialProof.tsx';
+import { Footer } from './components/Footer.tsx';
+import { TriageForm } from './components/TriageForm.tsx';
 import { motion } from 'framer-motion';
 
 const App: React.FC = () => {
   const [view, setView] = useState<'landing' | 'form'>('landing');
 
   const handleScrollTo = useCallback((sectionId: string) => {
-    // Si estamos en el formulario, primero volvemos a la landing
     if (view === 'form') {
       setView('landing');
-      // Esperamos un momento a que el DOM de la landing se monte
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -34,7 +31,6 @@ const App: React.FC = () => {
         }
       }, 100);
     } else {
-      // Si ya estamos en la landing, scroll directo
       const element = document.getElementById(sectionId);
       if (element) {
         const offset = 80;
@@ -53,7 +49,6 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-cyan-500/30">
-      {/* Fondo ambiental fijo con destellos mejorados */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <motion.div 
           animate={{ 
@@ -79,18 +74,6 @@ const App: React.FC = () => {
             delay: 1
           }}
           className="absolute bottom-[-15%] right-[-10%] w-[60%] h-[60%] bg-cyan-600/20 blur-[130px] rounded-full" 
-        />
-        <motion.div 
-          animate={{ 
-            opacity: [0.05, 0.15, 0.05],
-          }}
-          transition={{ 
-            duration: 12, 
-            repeat: Infinity, 
-            ease: "easeInOut",
-            delay: 2
-          }}
-          className="absolute top-[30%] left-[40%] w-[30%] h-[30%] bg-blue-500/10 blur-[150px] rounded-full" 
         />
       </div>
 
@@ -124,7 +107,7 @@ const App: React.FC = () => {
             </button>
             
             <div className="text-center mb-10">
-              <h1 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">Descubre si tu clínica o consultorio califica</h1>
+              <h1 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">Verifica si tu clínica o consultorio califica</h1>
               <p className="text-gray-400 max-w-lg mx-auto leading-relaxed">
                 Llena tus datos y te contactaremos en breve.
               </p>
@@ -133,10 +116,6 @@ const App: React.FC = () => {
             <div className="w-full">
               <TriageForm />
             </div>
-            
-            <p className="text-center text-xs text-gray-500 mt-12 uppercase tracking-widest font-medium">
-              Iconic Group Security Protocol &bull; Datos Protegidos
-            </p>
           </div>
         </main>
       )}

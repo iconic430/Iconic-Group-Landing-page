@@ -1,16 +1,14 @@
-
 import React, { useEffect } from 'react';
 
 export const TriageForm: React.FC = () => {
   useEffect(() => {
-    // Carga el script de GoHighLevel necesario para redimensionar el iframe
+    // Carga el script de GoHighLevel necesario para el formulario embebido
     const script = document.createElement('script');
     script.src = "https://link.msgsndr.com/js/form_embed.js"; 
     script.async = true;
     document.body.appendChild(script);
 
     return () => {
-      // Limpieza del script al desmontar el componente
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
@@ -20,7 +18,7 @@ export const TriageForm: React.FC = () => {
   return (
     <div className="w-full mx-auto bg-transparent" style={{ minHeight: '600px' }}>
       <iframe
-        src="https://api.leadconnectorhq.com/widget/form/K0dkGAylDXzC23aVAjp0"
+        src="https://api.leadconnectorhq.com/widget/form/aQnvyaeF7jqxUUElgBoF"
         style={{ 
           width: '100%', 
           height: '100%', 
@@ -28,7 +26,7 @@ export const TriageForm: React.FC = () => {
           borderRadius: '12px',
           backgroundColor: 'transparent'
         }}
-        id="inline-K0dkGAylDXzC23aVAjp0"
+        id="inline-aQnvyaeF7jqxUUElgBoF"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
         data-trigger-value=""
@@ -36,12 +34,11 @@ export const TriageForm: React.FC = () => {
         data-activation-value=""
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
-        data-form-name="Affiliate Marketing Agency Lead"
-        data-height="495"
-        data-layout-iframe-id="inline-K0dkGAylDXzC23aVAjp0"
-        data-form-id="K0dkGAylDXzC23aVAjp0"
-        title="Affiliate Marketing Agency Lead"
-        allowTransparency={true}
+        data-form-name="Iconic Forms"
+        data-height="490"
+        data-layout-iframe-id="inline-aQnvyaeF7jqxUUElgBoF"
+        data-form-id="aQnvyaeF7jqxUUElgBoF"
+        title="Iconic Forms"
       >
       </iframe>
     </div>
