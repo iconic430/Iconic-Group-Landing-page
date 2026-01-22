@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback } from 'react';
 import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
@@ -13,39 +14,25 @@ const App: React.FC = () => {
   const [view, setView] = useState<'landing' | 'form'>('landing');
 
   const handleScrollTo = useCallback((sectionId: string) => {
-    if (view === 'form') {
-      setView('landing');
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const offset = 80;
-          const bodyRect = document.body.getBoundingClientRect().top;
-          const elementRect = element.getBoundingClientRect().top;
-          const elementPosition = elementRect - bodyRect;
-          const offsetPosition = elementPosition - offset;
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
 
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        }
-      }, 100);
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        const offset = 80;
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = element.getBoundingClientRect().top;
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
-  }, [view]);
+  }, []);
+
+  const navigateToForm = () => {
+    // Ahora en lugar de cambiar de vista, hacemos scroll a la sección del formulario integrada
+    handleScrollTo('verificacion');
+  };
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-cyan-500/30">
@@ -78,47 +65,36 @@ const App: React.FC = () => {
       </div>
 
       <Navbar 
-        onNavigateForm={() => setView('form')} 
+        onNavigateForm={navigateToForm} 
         onScrollTo={handleScrollTo}
       />
       
-      {view === 'landing' ? (
-        <main className="relative z-10">
-          <Hero onNavigateForm={() => setView('form')} />
-          <Problem />
-          <Solution onNavigateForm={() => setView('form')} />
-          <Benefits />
-          <SocialProof />
-          <Footer onNavigateForm={() => setView('form')} onScrollTo={handleScrollTo} />
-        </main>
-      ) : (
-        <main className="relative z-10 pt-40 pb-12 px-6 flex flex-col items-center min-h-screen">
-          <div className="max-w-4xl w-full">
-            <button 
-              onClick={() => setView('landing')}
-              className="mb-8 text-gray-400 hover:text-white flex items-center gap-2 transition-colors group"
-            >
-              <div className="p-2 rounded-full bg-white/5 border border-white/10 group-hover:border-cyan-500/50 transition-colors">
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
+      <main className="relative z-10">
+        <Hero onNavigateForm={navigateToForm} />
+        <Problem />
+        
+        {/* Sección de Formulario Integrada */}
+        <section id="verificacion" className="py-24 bg-[#0a0a0a] scroll-mt-20">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">Verifica si tu clínica califica</h2>
+                <p className="text-gray-400 max-w-lg mx-auto leading-relaxed">
+                  Completa el formulario a continuación y te contactaremos para analizar tu caso.
+                </p>
               </div>
-              Volver al inicio
-            </button>
-            
-            <div className="text-center mb-10">
-              <h1 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">Verifica si tu clínica o consultorio califica</h1>
-              <p className="text-gray-400 max-w-lg mx-auto leading-relaxed">
-                Llena tus datos y te contactaremos en breve.
-              </p>
-            </div>
-            
-            <div className="w-full">
-              <TriageForm />
+              <div className="bg-white/[0.02] border border-white/10 rounded-[2.5rem] p-4 md:p-8 shadow-2xl">
+                <TriageForm />
+              </div>
             </div>
           </div>
-        </main>
-      )}
+        </section>
+
+        <Solution onNavigateForm={navigateToForm} />
+        <Benefits />
+        <SocialProof />
+        <Footer onNavigateForm={navigateToForm} onScrollTo={handleScrollTo} />
+      </main>
     </div>
   );
 };

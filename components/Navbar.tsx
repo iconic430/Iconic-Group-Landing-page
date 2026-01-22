@@ -30,11 +30,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateForm, onScrollTo }) =>
           </span>
         </div>
 
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
-          <button onClick={() => onScrollTo('sistema')} className="hover:text-white transition-colors">El Sistema</button>
-          <button onClick={() => onScrollTo('resultados')} className="hover:text-white transition-colors">Resultados</button>
-          <button onClick={() => onScrollTo('doctores')} className="hover:text-white transition-colors">Para Doctores</button>
-        </div>
+        {/* Los botones de navegación central han sido eliminados según lo solicitado */}
 
         <div>
           <button 
