@@ -83,7 +83,7 @@ const App: React.FC = () => {
                   Completa el formulario a continuación y te contactaremos para analizar tu caso.
                 </p>
               </div>
-              <div className="bg-white/[0.02] border border-white/10 rounded-[2.5rem] p-4 md:p-8 shadow-2xl">
+              <div className="w-full">
                 <TriageForm />
               </div>
             </div>
