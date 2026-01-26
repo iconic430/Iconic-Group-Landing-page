@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -21,14 +20,34 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             Especialistas en Sector Salud & Estética
           </div>
           
-          <h1 className="text-5xl md:text-[5.5rem] font-extrabold leading-[0.95] mb-10 tracking-tighter w-full">
-            Deja de Perseguir Leads Curiosos. <br className="hidden md:block" />
-            Empieza a Recibir <br className="hidden md:block" />
-            <span className="text-gradient">Pacientes Calificados.</span>
+          <h1 className="text-3xl md:text-[3.2rem] font-extrabold leading-[1.15] mb-8 tracking-tighter w-full max-w-6xl text-white">
+            Implementamos el Sistema de Triaje Digital en tu <span className="text-gradient">clínica para agendar 30 pacientes de alto valor en 60 días o menos.</span>
           </h1>
+
+          {/* Video Placeholder Box */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="w-full max-w-4xl aspect-video bg-white/5 border border-white/10 rounded-[2rem] mb-12 relative overflow-hidden group cursor-pointer shadow-2xl shadow-cyan-500/10"
+          >
+            <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-transparent opacity-50" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-20 h-20 bg-cyan-500 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/40 group-hover:scale-110 transition-transform">
+                <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </div>
+            {/* Fondo simulando video */}
+            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-white/40 text-xs uppercase tracking-widest font-bold">
+              <span>Demo del Sistema</span>
+              <span>02:45</span>
+            </div>
+          </motion.div>
           
           <p className="text-lg md:text-2xl text-gray-400 mb-14 max-w-4xl leading-relaxed">
-            Instalamos una infraestructura de adquisición en tu clínica que atrae, filtra y agenda pacientes en piloto automático, sin que tu recepción pierda tiempo explicando precios.
+            Exclusivo para clínicas dentales que facturan +$6,000 USD y buscan escalar con un modelo de adquisición probado con un 77.7% de efectividad.
           </p>
           
           <div className="flex flex-col items-center gap-8 w-full sm:w-auto">
@@ -38,32 +57,48 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             >
               Quiero instalar este sistema
             </button>
-            
-            <button 
-              onClick={onNavigateForm}
-              className="text-gray-400 hover:text-white transition-colors text-lg font-medium flex items-center gap-2 group"
-            >
-              <span>O ver demo del triaje digital</span>
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </button>
           </div>
           
-          <div className="mt-24 flex flex-col items-center gap-5">
-            <div className="flex -space-x-3">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <img 
-                  key={i} 
-                  src={`https://picsum.photos/seed/${i + 55}/100/100`} 
-                  alt="Doctor" 
-                  className="w-14 h-14 rounded-full border-2 border-[#0a0a0a]" 
+          <div className="mt-20 flex flex-col gap-4">
+            {/* Line 1: Social Proof */}
+            <div className="flex items-center justify-center gap-3">
+              <svg 
+                className="w-6 h-6 text-cyan-500 flex-shrink-0" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={3} 
+                  d="M5 13l4 4L19 7" 
                 />
-              ))}
+              </svg>
+              <p className="text-sm md:text-lg text-gray-500 font-medium">
+                Socio de confianza para <span className="text-white font-bold">+21 Clínicas Premium</span> en México.
+              </p>
             </div>
-            <p className="text-sm md:text-base text-gray-500 font-medium">
-              Socio de confianza para <span className="text-white font-bold">+50 Clínicas Premium</span> en LATAM y España.
-            </p>
+
+            {/* Line 2: Contract Guarantee */}
+            <div className="flex items-center justify-center gap-3">
+              <svg 
+                className="w-6 h-6 text-cyan-500 flex-shrink-0" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={3} 
+                  d="M5 13l4 4L19 7" 
+                />
+              </svg>
+              <p className="text-sm md:text-lg text-gray-500 font-medium">
+                <span className="text-white font-bold">Garantizado por contrato.</span>
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
