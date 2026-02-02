@@ -1,13 +1,14 @@
+
 import React, { useState, useCallback } from 'react';
-import { Navbar } from './components/Navbar.tsx';
-import { Hero } from './components/Hero.tsx';
-import { Problem } from './components/Problem.tsx';
-import { Solution } from './components/Solution.tsx';
-import { Benefits } from './components/Benefits.tsx';
-import { SocialProof } from './components/SocialProof.tsx';
-import { Footer } from './components/Footer.tsx';
-import { TriageForm } from './components/TriageForm.tsx';
-import { SecretPage } from './components/SecretPage.tsx';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { Problem } from './components/Problem';
+import { Solution } from './components/Solution';
+import { Benefits } from './components/Benefits';
+import { SocialProof } from './components/SocialProof';
+import { Footer } from './components/Footer';
+import { TriageForm } from './components/TriageForm';
+import { SecretPage } from './components/SecretPage';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const App: React.FC = () => {
