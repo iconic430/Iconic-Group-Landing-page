@@ -1,14 +1,13 @@
-
 import React, { useState, useCallback } from 'react';
-import { Navbar } from './components/Navbar.tsx';
-import { Hero } from './components/Hero.tsx';
-import { Problem } from './components/Problem.tsx';
-import { Solution } from './components/Solution.tsx';
-import { Benefits } from './components/Benefits.tsx';
-import { SocialProof } from './components/SocialProof.tsx';
-import { Footer } from './components/Footer.tsx';
-import { TriageForm } from './components/TriageForm.tsx';
-import { SecretPage } from './components/SecretPage.tsx';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { Problem } from './components/Problem';
+import { Solution } from './components/Solution';
+import { Benefits } from './components/Benefits';
+import { SocialProof } from './components/SocialProof';
+import { Footer } from './components/Footer';
+import { TriageForm } from './components/TriageForm';
+import { SecretPage } from './components/SecretPage';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const App: React.FC = () => {
@@ -17,7 +16,6 @@ const App: React.FC = () => {
   const handleScrollTo = useCallback((sectionId: string) => {
     if (currentView !== 'landing') {
       setCurrentView('landing');
-      // Esperar un poco a que el DOM se renderice antes de hacer scroll
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -129,7 +127,6 @@ const App: React.FC = () => {
         )}
       </AnimatePresence>
 
-      {/* Botón Secreto en la esquina inferior derecha */}
       <button 
         onClick={() => setCurrentView(prev => prev === 'landing' ? 'secret' : 'landing')}
         className="fixed bottom-4 right-4 w-8 h-8 rounded bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all z-[100] group opacity-40 hover:opacity-100"
