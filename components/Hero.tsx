@@ -17,7 +17,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-cyan-400 mb-10 uppercase tracking-[0.2em]">
             <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-            Especialistas en Sector Salud & Estética
+            Especialistas en clínicas & consultorios dentales
           </div>
           
           <h1 className="text-3xl md:text-[3.2rem] font-extrabold leading-[1.15] mb-8 tracking-tighter w-full max-w-6xl text-white">
