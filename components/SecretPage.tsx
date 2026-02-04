@@ -51,15 +51,16 @@ export const SecretPage: React.FC<SecretPageProps> = ({ onBack }) => {
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="flex-grow min-h-[700px] w-full bg-glass border border-white/10 rounded-[2.5rem] overflow-hidden relative shadow-2xl shadow-cyan-500/5 flex flex-col"
+        className="flex-grow min-h-[700px] w-full bg-transparent border border-white/10 rounded-[2.5rem] overflow-hidden relative shadow-2xl shadow-cyan-500/5 flex flex-col"
       >
         <div className="w-full h-full min-h-[700px] relative z-10">
           <iframe 
             src="https://link.markgrowth.pro/widget/booking/4yLc6nWJE0ytLrijalNv" 
-            style={{ width: '100%', height: '100%', minHeight: '700px', border: 'none', overflow: 'hidden' }} 
+            style={{ width: '100%', height: '100%', minHeight: '700px', border: 'none', overflow: 'hidden', backgroundColor: 'transparent' }} 
             scrolling="no" 
             id="4yLc6nWJE0ytLrijalNv_1769910126436"
             title="GoHighLevel Booking Calendar"
+            allowTransparency={true}
           ></iframe>
         </div>
 
