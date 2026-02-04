@@ -1,5 +1,5 @@
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
 import { Problem } from './components/Problem.tsx';
@@ -13,6 +13,48 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const App: React.FC = () => {
   const [currentView, setCurrentView] = useState<'landing' | 'secret'>('landing');
+
+  // Sistema de escucha para redirección automática tras envío de formulario
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      // Los formularios de GoHighLevel/MarkGrowth envían notificaciones vía postMessage
+      let data = event.data;
+      
+      // Intentar parsear si viene como string JSON
+      if (typeof data === 'string') {
+        try {
+          const parsed = JSON.parse(data);
+          data = parsed;
+        } catch (e) {
+          // No es JSON, ignorar error
+        }
+      }
+
+      // Verificamos si el mensaje indica un envío exitoso del formulario
+      const isSuccess = 
+        (typeof data === 'string' && (
+          data.includes('form-submitted') || 
+          data.includes('submit-success')
+        )) ||
+        (data && (
+          data.type === 'form-submitted' || 
+          data.method === 'form-submitted' ||
+          data.message === 'submit-success' ||
+          data.action === 'form-submitted'
+        ));
+
+      if (isSuccess) {
+        // Redirección automática inmediata a la agenda
+        setTimeout(() => {
+          setCurrentView('secret');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 600);
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
 
   const handleScrollTo = useCallback((sectionId: string) => {
     if (currentView !== 'landing') {
@@ -53,8 +95,8 @@ const App: React.FC = () => {
             key="landing"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, y: -20, scale: 0.98 }}
+            transition={{ duration: 0.4 }}
           >
             <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
               <motion.div 
@@ -99,7 +141,7 @@ const App: React.FC = () => {
                     <div className="text-center mb-12">
                       <h2 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">Verifica si tu clínica califica</h2>
                       <p className="text-gray-400 max-w-lg mx-auto leading-relaxed">
-                        Completa el formulario a continuación y te contactaremos para analizar tu caso.
+                        Completa el formulario a continuación para acceder a la agenda de consultoría.
                       </p>
                     </div>
                     <div className="w-full">
@@ -118,23 +160,28 @@ const App: React.FC = () => {
         ) : (
           <motion.div 
             key="secret"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <SecretPage onBack={() => setCurrentView('landing')} />
+            <SecretPage onBack={() => {
+              setCurrentView('landing');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }} />
           </motion.div>
         )}
       </AnimatePresence>
 
+      {/* Admin Bypass para pruebas (Casi invisible en la esquina) */}
       <button 
-        onClick={() => setCurrentView(prev => prev === 'landing' ? 'secret' : 'landing')}
-        className="fixed bottom-4 right-4 w-8 h-8 rounded bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all z-[100] group opacity-40 hover:opacity-100"
-        title="Acceso Restringido"
-      >
-        <div className="w-1.5 h-1.5 rounded-full bg-gray-600 group-hover:bg-cyan-500 transition-colors" />
-      </button>
+        onClick={() => {
+          setCurrentView(prev => prev === 'landing' ? 'secret' : 'landing');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        className="fixed bottom-4 right-4 w-4 h-4 rounded-full bg-white/5 hover:bg-cyan-500/20 z-[100] transition-colors"
+        title="Cambiar Vista"
+      />
     </div>
   );
 };
