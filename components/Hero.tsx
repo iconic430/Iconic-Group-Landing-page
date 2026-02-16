@@ -7,8 +7,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
-  // Enlace de Google Drive: https://drive.google.com/file/d/1AIHEQjOyyGOjjrSFgjx_hs-wGhai0dCS/preview
-  const driveEmbedUrl = "https://drive.google.com/file/d/1AIHEQjOyyGOjjrSFgjx_hs-wGhai0dCS/preview";
+  // Nuevo enlace de Google Drive formateado para previsualización (embed)
+  const driveEmbedUrl = "https://drive.google.com/file/d/1CJ33bdICKxMFg57RpvxFSSqSuinAHuZO/preview";
 
   return (
     <section className="relative min-h-[95vh] flex items-center pt-32 pb-24 overflow-hidden">
@@ -28,32 +28,31 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             Implementamos el Sistema de Triaje Digital en tu <span className="text-gradient">clínica para agendar 30 pacientes de alto valor en 60 días o menos.</span>
           </h1>
 
-          {/* Contenedor de Video con Proporción 9:16 */}
+          {/* Contenedor de Video con Proporción 6:20 */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="w-full max-w-[340px] aspect-[9/16] bg-black border border-white/10 rounded-[2.5rem] mb-12 relative overflow-hidden shadow-2xl shadow-cyan-500/10"
+            className="w-full max-w-[280px] aspect-[6/20] bg-black border border-white/10 rounded-[3rem] mb-12 relative overflow-hidden shadow-2xl shadow-cyan-500/10"
           >
             {/* 
-              Técnica de Cropping Ajustada para 9:16:
-              - Aumentamos la altura del iframe al 120% para desbordar intencionalmente.
-              - Desplazamos un -10% hacia arriba para ocultar el header de Google Drive.
-              - El overflow-hidden del padre se encarga de recortar los controles inferiores.
+              Técnica de Cropping para 6:20:
+              - Escalado al 135% para asegurar que los controles de Drive (header/footer) desaparezcan.
+              - Desplazamiento superior del -18% para centrar el video y eliminar la barra de título.
             */}
-            <div className="absolute inset-0 overflow-hidden rounded-[2.5rem]">
+            <div className="absolute inset-0 overflow-hidden rounded-[3rem]">
               <iframe
                 src={driveEmbedUrl}
-                className="absolute w-full h-[120%] border-0"
-                style={{ top: '-10%', left: 0 }}
+                className="absolute w-full h-[135%] border-0"
+                style={{ top: '-18%', left: 0 }}
                 allow="autoplay; fullscreen"
                 title="Iconic Group Presentation Video"
                 allowFullScreen
               ></iframe>
             </div>
             
-            {/* Capa de protección estética para el formato 9:16 */}
-            <div className="absolute inset-0 pointer-events-none border border-white/5 rounded-[2.5rem] shadow-[inset_0_0_50px_rgba(0,0,0,0.9)]"></div>
+            {/* Capa de protección para evitar interacción con la UI de Drive y añadir profundidad */}
+            <div className="absolute inset-0 pointer-events-none border border-white/5 rounded-[3rem] shadow-[inset_0_0_60px_rgba(0,0,0,0.95)]"></div>
           </motion.div>
           
           <p className="text-lg md:text-2xl text-gray-400 mb-14 max-w-4xl leading-relaxed">
