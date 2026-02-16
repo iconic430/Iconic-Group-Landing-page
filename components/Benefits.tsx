@@ -11,7 +11,6 @@ export const Benefits: React.FC = () => {
         </h2>
 
         <div className="grid md:grid-cols-6 md:grid-rows-2 gap-6 h-full lg:h-[600px]">
-          {/* Bento Box 1 */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +26,6 @@ export const Benefits: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Bento Box 2 */}
           <motion.div 
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
@@ -38,13 +36,12 @@ export const Benefits: React.FC = () => {
              <div className="flex items-center gap-6">
                 <div className="text-4xl group-hover:scale-110 transition-transform">📱</div>
                 <div>
-                   <h3 className="text-2xl font-bold mb-2">Tecnología Propia</h3>
-                   <p className="text-gray-400">Te instalamos el CRM y la Iconic App móvil. Un activo que te pertenece para siempre.</p>
+                   <h3 className="text-2xl font-bold mb-2">Infraestructura Propia</h3>
+                   <p className="text-gray-400">Te instalamos el CRM y la Iconic App móvil. Un activo tecnológico que te pertenece para siempre.</p>
                 </div>
              </div>
           </motion.div>
 
-          {/* Bento Box 3 */}
           <motion.div 
              initial={{ opacity: 0, y: 20 }}
              whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +53,7 @@ export const Benefits: React.FC = () => {
                 <div className="text-4xl group-hover:scale-110 transition-transform">🗓️</div>
                 <div>
                    <h3 className="text-2xl font-bold mb-2">Agenda Llena</h3>
-                   <p className="text-gray-400">Priorizamos la ocupación de sillón/camilla. Optimizamos para facturación, no por likes.</p>
+                   <p className="text-gray-400">Priorizamos la ocupación de sillón y camilla. Optimizamos para facturación neta, no por likes.</p>
                 </div>
              </div>
           </motion.div>

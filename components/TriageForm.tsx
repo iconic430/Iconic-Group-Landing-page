@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 
 export const TriageForm: React.FC = () => {
   useEffect(() => {
-    // Carga el script de GoHighLevel (MarkGrowth) necesario para el formulario embebido
     const scriptId = 'ghl-form-script';
     if (!document.getElementById(scriptId)) {
       const script = document.createElement('script');

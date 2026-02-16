@@ -30,8 +30,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateForm, onScrollTo }) =>
           </span>
         </div>
 
-        {/* Los botones de navegación central han sido eliminados según lo solicitado */}
-
         <div>
           <button 
             onClick={onNavigateForm}

@@ -27,7 +27,7 @@ export const Problem: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">El modelo tradicional de agencia <span className="text-red-500">está roto.</span></h2>
           <p className="text-gray-400 text-lg">
-            Las agencias te venden "Likes" y "Clicks". Nosotros te entregamos pacientes que ya saben tu valor y están listos para pagar.
+            Las agencias te venden "Likes" y "Clicks". Nosotros instalamos una infraestructura que te entrega pacientes educados y listos para pagar.
           </p>
         </div>
 

@@ -22,7 +22,7 @@ export const Solution: React.FC<SolutionProps> = ({ onNavigateForm }) => {
     },
     {
       title: "Cierre Asistido",
-      desc: "Tu equipo solo recibe las citas listas para confirmar en nuestra Iconic App. Menos trabajo, más pacientes."
+      desc: "Tu equipo solo recibe las citas listas para confirmar en nuestra Iconic App. Menos fricción, más ventas."
     }
   ];
 
@@ -34,12 +34,11 @@ export const Solution: React.FC<SolutionProps> = ({ onNavigateForm }) => {
             Presentando: <span className="text-cyan-400">El Protocolo de Triaje Digital™</span>
           </h2>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Un sistema de ingeniería aplicado al crecimiento de clínicas que elimina la incertidumbre de tu agenda.
+            Un sistema de ingeniería aplicado al crecimiento de clínicas que elimina la incertidumbre de tu flujo de pacientes.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-4 gap-4 relative">
-          {/* Connector line for desktop */}
           <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent hidden lg:block -translate-y-1/2" />
           
           {steps.map((step, i) => (
