@@ -8,7 +8,8 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
   // Nuevo enlace de Google Drive formateado para previsualización (embed)
-  const driveEmbedUrl = "https://drive.google.com/file/d/1CJ33bdICKxMFg57RpvxFSSqSuinAHuZO/preview";
+  // ID original: 1NAk7VMrPBqtLO-LRxpwIa7v464Bz55_Y
+  const driveEmbedUrl = "https://drive.google.com/file/d/1NAk7VMrPBqtLO-LRxpwIa7v464Bz55_Y/preview";
 
   return (
     <section className="relative min-h-[95vh] flex items-center pt-32 pb-24 overflow-hidden">
