@@ -45,7 +45,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             <div className="absolute inset-0 overflow-hidden rounded-[2.5rem]">
               <iframe
                 src={driveEmbedUrl}
-                className="absolute w-full h-[120%] border-0"
+                className="absolute w-full h-[120%] border-0 aspect-[9/16]"
                 style={{ top: '-10%', left: 0 }}
                 allow="autoplay; fullscreen"
                 title="Iconic Group Presentation Video"
@@ -58,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           </motion.div>
           
           <p className="text-lg md:text-2xl text-gray-400 mb-14 max-w-4xl leading-relaxed">
-            Exclusivo para clínicas dentales que facturan +$6,000 USD y buscan escalar con un modelo de adquisición probado con un 77.7% de efectividad.
+            Exclusivo para clínicas y consultorios dentales que facturan +$100,000 MXN y buscan escalar con un modelo de adquisición probado con un 87% de efectividad.
           </p>
           
           <button 
@@ -74,7 +74,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
               </svg>
               <p className="text-sm md:text-lg text-gray-500 font-medium">
-                Socio de confianza para <span className="text-white font-bold">+21 Clínicas Premium</span> en México.
+                Socio de confianza para <span className="text-white font-bold">+18 Clínicas y consultorios Premium</span> en México.
               </p>
             </div>
             <div className="flex items-center justify-center gap-3">
