@@ -8,6 +8,7 @@ import { Benefits } from './components/Benefits.tsx';
 import { SocialProof } from './components/SocialProof.tsx';
 import { Footer } from './components/Footer.tsx';
 import { motion } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 const App: React.FC = () => {
   const handleScrollTo = useCallback((sectionId: string) => {
@@ -58,6 +59,7 @@ const App: React.FC = () => {
         <SocialProof />
         <Footer onNavigateForm={navigateToForm} onScrollTo={handleScrollTo} />
       </main>
+      <Analytics />
     </div>
   );
 };
