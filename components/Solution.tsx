@@ -62,9 +62,9 @@ export const Solution: React.FC<SolutionProps> = ({ onNavigateForm }) => {
         <div className="mt-20 text-center">
           <button 
             onClick={onNavigateForm}
-            className="bg-white text-black hover:bg-gray-200 px-10 py-5 rounded-2xl text-xl font-black transition-all transform hover:-translate-y-1 active:scale-95 shadow-xl"
+            className="max-w-[320px] bg-cyan-500 hover:bg-cyan-400 text-black px-8 py-5 rounded-2xl text-lg font-black transition-all transform hover:-translate-y-1 active:scale-95 glow-brand shadow-2xl shadow-cyan-500/20 leading-tight"
           >
-             Ver Demo del Triaje →
+             Quiero ver si mi clínica califica
           </button>
         </div>
       </div>

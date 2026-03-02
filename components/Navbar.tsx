@@ -23,7 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateForm, onScrollTo }) =>
         isScrolled ? 'bg-[#0a0a0a]/80 backdrop-blur-md py-4 border-b border-white/5' : 'bg-transparent py-6'
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-6 flex items-center justify-between gap-4">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <span className="text-2xl font-extrabold tracking-tighter text-white">
             ICONIC<span className="text-cyan-500">GROUP</span>
@@ -33,9 +33,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateForm, onScrollTo }) =>
         <div>
           <button 
             onClick={onNavigateForm}
-            className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 active:scale-95 glow-brand shadow-lg shadow-cyan-500/20"
+            className="bg-cyan-500 hover:bg-cyan-400 text-black px-4 py-2 rounded-2xl text-[10px] md:text-xs font-bold transition-all transform hover:scale-105 active:scale-95 glow-brand shadow-lg shadow-cyan-500/20 max-w-[130px] leading-tight text-center"
           >
-            Agendar Consultoría
+            Quiero ver si mi clínica califica
           </button>
         </div>
       </div>

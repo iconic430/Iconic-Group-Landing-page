@@ -16,9 +16,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateForm, onScrollTo, show
             <h2 className="text-3xl md:text-5xl font-black mb-8 tracking-tighter text-white">¿Tu clínica está lista para el siguiente nivel?</h2>
             <button 
               onClick={onNavigateForm}
-              className="bg-cyan-500 hover:bg-cyan-400 text-black px-12 py-6 rounded-2xl text-xl font-black mb-16 transition-all transform hover:scale-105 active:scale-95 glow-brand shadow-lg shadow-cyan-500/20"
+              className="max-w-[320px] bg-cyan-500 hover:bg-cyan-400 text-black px-8 py-5 rounded-2xl text-lg font-black mb-16 transition-all transform hover:scale-105 active:scale-95 glow-brand shadow-lg shadow-cyan-500/20 leading-tight"
             >
-              Comenzar Verificación
+              Quiero ver si mi clínica califica
             </button>
           </>
         )}

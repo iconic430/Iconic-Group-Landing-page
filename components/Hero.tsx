@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TriageForm } from './TriageForm.tsx';
 
 interface HeroProps {
   onNavigateForm: () => void;
@@ -64,9 +63,9 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           
           <button 
             onClick={onNavigateForm}
-            className="w-full sm:w-auto bg-cyan-500 hover:bg-cyan-400 text-black px-14 py-7 rounded-2xl text-2xl md:text-3xl font-black transition-all transform hover:scale-105 active:scale-95 glow-brand shadow-2xl shadow-cyan-500/40"
+            className="w-full sm:w-auto max-w-[380px] bg-cyan-500 hover:bg-cyan-400 text-black px-10 py-6 rounded-2xl text-xl md:text-2xl font-black transition-all transform hover:scale-105 active:scale-95 glow-brand shadow-2xl shadow-cyan-500/40 leading-tight"
           >
-            Quiero instalar este sistema
+            Quiero ver si mi clínica califica
           </button>
           
           <div className="mt-20 flex flex-col gap-4">
@@ -85,25 +84,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
               <p className="text-sm md:text-lg text-gray-500 font-medium">
                 Garantía de resultados firmada <span className="text-white font-bold">por contrato.</span>
               </p>
-            </div>
-          </div>
-
-          {/* Fase 1: Verificación de Infraestructura */}
-          <div id="verificacion" className="w-full mt-24 scroll-mt-20">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
-                <div className="inline-block px-4 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-6">Fase 1: Verificación de Infraestructura</div>
-                <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">Verifica si tu clínica califica</h2>
-                <p className="text-gray-400 max-w-lg mx-auto leading-relaxed">
-                  Completa el triaje a continuación para iniciar el proceso de validación técnica de tu clínica y descubrir si podemos implementar nuestro sistema.
-                </p>
-              </div>
-              <div className="w-full relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <div className="relative bg-black/40 rounded-[2rem] border border-white/5 overflow-hidden backdrop-blur-sm">
-                  <TriageForm />
-                </div>
-              </div>
             </div>
           </div>
         </motion.div>
