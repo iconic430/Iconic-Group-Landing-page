@@ -38,7 +38,6 @@ export const TriageForm: React.FC = () => {
         data-layout-iframe-id="inline-L8M9TIz1NLpT2JfEeB0d"
         data-form-id="L8M9TIz1NLpT2JfEeB0d"
         title="Form 1 Landing"
-        allowTransparency={true}
       >
       </iframe>
     </div>
