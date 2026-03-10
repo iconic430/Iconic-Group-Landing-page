@@ -7,7 +7,7 @@ import { Solution } from './components/Solution.tsx';
 import { Benefits } from './components/Benefits.tsx';
 import { SocialProof } from './components/SocialProof.tsx';
 import { Footer } from './components/Footer.tsx';
-import { TriageForm } from './components/TriageForm.tsx';
+import { BookingCalendar } from './components/BookingCalendar.tsx';
 import { motion } from 'framer-motion';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -62,16 +62,16 @@ const App: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <div className="inline-block px-4 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-6">Fase 1: Verificación de Infraestructura</div>
-                <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">Verifica si tu clínica califica</h2>
+                <div className="inline-block px-4 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-6">Fase 1: Agendar Consultoría Estratégica</div>
+                <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4">Reserva tu sesión de diagnóstico</h2>
                 <p className="text-gray-400 max-w-lg mx-auto leading-relaxed">
-                  Completa el triaje a continuación para iniciar el proceso de validación técnica de tu clínica y descubrir si podemos implementar nuestro sistema.
+                  Selecciona el día y la hora que mejor te convenga para iniciar el proceso de validación técnica de tu clínica y descubrir si podemos implementar nuestro sistema.
                 </p>
               </div>
               <div className="w-full relative group">
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                 <div className="relative bg-black/40 rounded-[2rem] border border-white/5 overflow-hidden backdrop-blur-sm">
-                  <TriageForm />
+                  <BookingCalendar />
                 </div>
               </div>
             </div>
