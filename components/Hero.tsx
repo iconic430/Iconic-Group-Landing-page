@@ -51,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           </motion.div>
           
           <p className="text-lg md:text-2xl text-gray-400 mb-14 max-w-4xl leading-relaxed">
-            Exclusivo para clínicas y consultorios que ya facturan +$100k y buscan escalar con un modelo de adquisición probado con un 92% de efectividad.
+            Exclusivo para clínicas y consultorios que ya facturan +$100k y buscan escalar con un modelo de adquisición probado con un 87% de efectividad.
           </p>
           
           <button 

@@ -33,11 +33,11 @@ export const TriageForm: React.FC = () => {
         data-activation-value=""
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
-        data-form-name="Form 1 Landing"
+        data-form-name="Form Landing Calificatorio"
         data-height="576"
         data-layout-iframe-id="inline-L8M9TIz1NLpT2JfEeB0d"
         data-form-id="L8M9TIz1NLpT2JfEeB0d"
-        title="Form 1 Landing"
+        title="Form Landing Calificatorio"
       >
       </iframe>
     </div>
