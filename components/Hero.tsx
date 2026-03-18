@@ -26,7 +26,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           </div>
           
           <h1 className="text-3xl md:text-[3.2rem] font-extrabold leading-[1.15] mb-8 tracking-tighter w-full max-w-6xl text-white">
-            Implementamos el Sistema de Triaje Digital en tu <span className="text-gradient">clínica para agendar 30 pacientes de alto valor en 60 días o menos.</span>
+            Inyectamos $200,000 adicionales a tu facturación en menos de 60 días <span className="text-gradient">sin invertir un solo peso extra en anuncios.</span>
           </h1>
 
           {/* Contenedor de Video con Proporción 16:9 */}
@@ -51,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           </motion.div>
           
           <p className="text-lg md:text-2xl text-gray-400 mb-14 max-w-4xl leading-relaxed">
-            Exclusivo para clínicas y consultorios dentales que facturan +$100,000 MXN y buscan escalar con un modelo de adquisición probado con un 87% de efectividad.
+            Exclusivo para clínicas y consultorios que ya facturan +$100k y buscan escalar con un modelo de adquisición probado con un 92% de efectividad.
           </p>
           
           <button 
