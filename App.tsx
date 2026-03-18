@@ -54,9 +54,9 @@ const App: React.FC = () => {
       <main className="relative z-10">
         <Hero onNavigateForm={navigateToForm} />
         <Problem />
-        
         <Solution onNavigateForm={navigateToForm} />
         <Benefits />
+        <SocialProof />
         
         <section id="verificacion" className="py-24 bg-[#0a0a0a] scroll-mt-20">
           <div className="container mx-auto px-6">
@@ -78,7 +78,6 @@ const App: React.FC = () => {
           </div>
         </section>
 
-        <SocialProof />
         <Footer onNavigateForm={navigateToForm} onScrollTo={handleScrollTo} />
       </main>
       <Analytics />
