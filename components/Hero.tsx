@@ -7,10 +7,6 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
-  // Nuevo enlace de Google Drive formateado para previsualización (embed)
-  // ID original: 1NAk7VMrPBqtLO-LRxpwIa7v464Bz55_Y
-  const driveEmbedUrl = "https://drive.google.com/file/d/1NAk7VMrPBqtLO-LRxpwIa7v464Bz55_Y/preview";
-
   return (
     <section className="relative min-h-[95vh] flex items-center pt-32 pb-24 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
@@ -38,11 +34,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           >
             <div className="absolute inset-0 overflow-hidden rounded-[1.5rem]">
               <iframe
-                src={driveEmbedUrl}
+                id="panda-58f2bbcd-377c-46bf-9c15-7ad44e5d7c4b"
+                src="https://player-vz-9b0754fb-cb5.tv.pandavideo.com/embed/?v=58f2bbcd-377c-46bf-9c15-7ad44e5d7c4b"
+                style={{ border: 'none' }}
+                allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
+                allowFullScreen={true}
                 className="absolute w-full h-full border-0"
-                allow="autoplay; fullscreen"
                 title="Iconic Group Presentation Video"
-                allowFullScreen
               ></iframe>
             </div>
             
