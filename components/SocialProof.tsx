@@ -2,71 +2,75 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+interface SocialProofProps {
+  onNavigateForm: () => void;
+}
+
 const testimonials = [
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dr. Roberto M.",
-    specialty: "Cirujano Plástico",
+    specialty: "Ortodoncia",
     text: "Lo que más valoro de Iconic Group no son los anuncios, sino el filtro que instalaron. Antes mi asistente perdía horas contestando '¿precio?' en whatsapp e instagram. Ahora, gracias a su sistema de Triaje, solo me llegan notificaciones de pacientes que ya saben el costo aproximado y quieren agendar valoración, unicamente por WhatsApp Recuperé el control de mi agenda."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dra. Elena S.",
-    specialty: "Medicina Estética",
+    specialty: "Carillas",
     text: "Había trabajado con tres agencias antes y todas me traían 'likes'. Iconic Group fue la primera en hablarme de 'infraestructura'. La App que le instalaron a mi recepcionista es una maravilla; le avisa en tiempo real cuando un paciente quiere cerrar la cita. La tecnología que usan está a otro nivel."
   },
   {
     stars: "⭐⭐⭐⭐",
     author: "Dr. Javier C.",
-    specialty: "Rinoplastia Ultrasónica",
+    specialty: "Implantes",
     text: "Impresionante la velocidad de respuesta. Hice la prueba de dejar mis datos en mi propio anuncio y el WhatsApp automático me contactó en menos de 30 segundos con una atención super personalizada. Eso ha aumentado mi tasa de cierre un 40% en el primer mes."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dra. Sofía L.",
-    specialty: "Armonización Facial",
+    specialty: "Blanqueamiento",
     text: "Me daba miedo que la automatización se sintiera robótica, pero el equipo de Iconic logró un equilibrio perfecto. El bot hace el trabajo pesado de filtrar, y mi equipo solo entra para el cierre final. Mis pacientes llegan a consulta sintiendo que recibieron atención VIP desde el primer clic."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dr. Alejandro V.",
-    specialty: "Liposucción HD",
+    specialty: "Prótesis",
     text: "Dejamos de perseguir a curiosos. El sistema de calificación que implementaron descarta automáticamente a quien no tiene presupuesto para una cirugía, así que ahora mi sala de espera tiene pacientes reales, no solo gente preguntando. Altamente recomendados como Growth Partners."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dra. Carmen R.",
-    specialty: "Dermatóloga Estética",
+    specialty: "Resina",
     text: "La implementación fue rapidísima. En menos de 10 días ya tenía el sistema de citas automático funcionando. Lo mejor es que se integró con mi calendario actual, así que no hubo confusiones de horarios. Muy profesionales."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dr. Miguel Ángel P.",
-    specialty: "Cirugía Reconstructiva",
+    specialty: "Ortodoncia",
     text: "La diferencia entre una agencia de marketing y Iconic Group es abismal. Ellos entendieron que yo no vendo productos, vendo procedimientos médicos de alto valor. Su sistema de 'Nivel de Consciencia' educa al paciente antes de que llegue a mí."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dra. Fernanda G.",
-    specialty: "Odontopediatría",
+    specialty: "Blanqueamiento",
     text: "Mi consultorio es un caos de niños y no tengo tiempo de estar en el celular. El sistema de Iconic Group trabaja solo 24/7. Me encanta despertar y ver que durante la noche se agendaron solas 3 valoraciones nuevas. Es como tener una recepcionista nocturna que no cobra extra."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dr. Luis T.",
-    specialty: "Ortodoncia e Invisalign",
+    specialty: "Ortodoncia",
     text: "El problema de mi clínica no era falta de mensajes, era el ausentismo. La gente agendaba y no iba. Iconic Group implementó un sistema de confirmación por WhatsApp que redujo mis inasistencias a casi cero. Solo por eso, el servicio se paga solo."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dra. Patricia M.",
-    specialty: "Diseño de Sonrisa",
+    specialty: "Carillas",
     text: "Increíble el sistema de 'Rescate'. Me di cuenta de que mucha gente pedía info y se le olvidaba agendar. El sistema automatizado de Iconic les manda un audio de seguimiento que se siente súper natural y recuperamos muchísimas citas que dábamos por perdidas."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dr. Hugo R.",
-    specialty: "Implantología",
+    specialty: "Implantes",
     text: "Buscaba pacientes para implantes completos, no para limpiezas baratas. La segmentación y el formulario de filtrado que crearon funcionó perfecto. Ahora solo atiendo casos grandes que realmente son rentables para la clínica."
   },
   {
@@ -78,48 +82,48 @@ const testimonials = [
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dr. Esteban Q.",
-    specialty: "Cirujano Maxilofacial",
+    specialty: "Prótesis",
     text: "Profesionalismo total. No te venden humo ni seguidores falsos. Te entregan un panel donde ves exactamente cuántas citas generaron y cuánto dinero entró. Esa transparencia es lo que le falta al sector salud."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dra. Laura I.",
-    specialty: "Clínica Dental Integral",
+    specialty: "Resina",
     text: "Somos una clínica con 4 sillones y necesitábamos flujo constante. El sistema de adquisición de Iconic Group nos mantiene la agenda llena semana tras semana. Lo mejor es que filtran a la gente que solo busca 'lo más barato'."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dr. Andrés O.",
-    specialty: "Medicina Antienvejecimiento",
+    specialty: "Blanqueamiento",
     text: "Convertirse en mi 'Growth Partner' fue literal. No solo me hacen los anuncios, se metieron a ver cómo contestaba mi recepción y nos ayudaron a mejorar los guiones de venta. Es un servicio 360 que no he visto en otra agencia."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dra. Valentina D.",
-    specialty: "Estética Corporal",
+    specialty: "Carillas",
     text: "El retorno de inversión es clarísimo. Invertimos en la infraestructura y en el primer mes ya habíamos recuperado el costo con solo 3 pacientes nuevos de paquete completo. El sistema es una máquina de ventas."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dr. Ricardo S.",
-    specialty: "Rehabilitación Oral",
+    specialty: "Implantes",
     text: "La paz mental de saber que hay un sistema captando y filtrando pacientes mientras yo estoy operando no tiene precio. Iconic Group automatizó la parte más tediosa de mi negocio."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dr. Fernando L.",
-    specialty: "Tricología (Injerto Capilar)",
+    specialty: "Prótesis",
     text: "Excelente manejo de la privacidad y los datos. El CRM que instalan es muy seguro y nos permite llevar un seguimiento impecable de cada paciente desde que ve el anuncio hasta que se opera."
   },
   {
     stars: "⭐⭐⭐⭐⭐",
     author: "Dra. Mariana P.",
-    specialty: "Medicina Integrativa",
+    specialty: "Resina",
     text: "Lo recomiendo ampliamente. Su promesa de 'Speed-to-Lead' es real. Hicimos Mystery Shopper a mi propia clínica y la velocidad con la que el bot atiende y resuelve dudas básicas es impresionante."
   }
 ];
 
-export const SocialProof: React.FC = () => {
+export const SocialProof: React.FC<SocialProofProps> = ({ onNavigateForm }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -216,7 +220,10 @@ export const SocialProof: React.FC = () => {
                   alt="Equipo médico e infraestructura digital" 
                   className="rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/3] grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
                 />
-                <div className="absolute -bottom-8 -right-8 bg-[#0a0a0a] border border-cyan-500/30 p-8 rounded-3xl z-20 shadow-2xl backdrop-blur-xl">
+                <button 
+                  onClick={onNavigateForm}
+                  className="absolute -bottom-8 -right-8 bg-[#0a0a0a] border border-cyan-500/30 p-8 rounded-3xl z-20 shadow-2xl backdrop-blur-xl text-left hover:scale-105 transition-transform active:scale-95"
+                >
                    <div className="flex flex-col gap-2">
                       <div className="flex items-center gap-3">
                         <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
@@ -225,7 +232,7 @@ export const SocialProof: React.FC = () => {
                       <div className="text-2xl font-black text-cyan-400 leading-none">43+ Citas / Mes</div>
                       <p className="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Garantizado por infraestructura</p>
                    </div>
-                </div>
+                </button>
               </div>
             </div>
           </div>
