@@ -56,7 +56,7 @@ const App: React.FC = () => {
         <Problem />
         <Solution onNavigateForm={navigateToForm} />
         <Benefits />
-        <SocialProof />
+        <SocialProof onNavigateForm={navigateToForm} />
         
         <section id="verificacion" className="py-24 bg-[#0a0a0a] scroll-mt-20">
           <div className="container mx-auto px-6">
