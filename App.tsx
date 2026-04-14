@@ -6,6 +6,10 @@ import { Problem } from './components/Problem.tsx';
 import { Solution } from './components/Solution.tsx';
 import { Benefits } from './components/Benefits.tsx';
 import { SocialProof } from './components/SocialProof.tsx';
+import { Founder } from './components/Founder.tsx';
+import { Objection } from './components/Objection.tsx';
+import { Guarantee } from './components/Guarantee.tsx';
+import { FAQ } from './components/FAQ.tsx';
 import { Footer } from './components/Footer.tsx';
 import { TriageForm } from './components/TriageForm.tsx';
 import { motion } from 'framer-motion';
@@ -56,7 +60,11 @@ const App: React.FC = () => {
         <Problem />
         <Solution onNavigateForm={navigateToForm} />
         <Benefits />
+        <Founder />
         <SocialProof onNavigateForm={navigateToForm} />
+        <Objection />
+        <Guarantee />
+        <FAQ />
         
         <section id="verificacion" className="py-24 bg-[#0a0a0a] scroll-mt-20">
           <div className="container mx-auto px-6">
