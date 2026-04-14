@@ -91,68 +91,99 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onNavigateForm }) => {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.5 }}
-                    className="bg-white/5 p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] border border-white/10 min-h-[300px] md:min-h-[350px] flex flex-col justify-between relative group"
+                    className="bg-white/[0.03] backdrop-blur-sm p-6 md:p-10 rounded-[2.5rem] border border-white/10 min-h-[350px] md:min-h-[400px] flex flex-col justify-between relative group overflow-hidden"
                   >
+                    {/* Subtle background glow for the card */}
+                    <div className="absolute -top-20 -right-20 w-40 h-40 bg-cyan-500/10 blur-[60px] rounded-full group-hover:bg-cyan-500/20 transition-colors duration-700" />
+
                     <div>
-                      <div className="text-lg md:text-xl mb-4 text-yellow-500 tracking-tight">{testimonials[currentIndex].stars}</div>
-                      <p className="text-base md:text-xl italic text-gray-200 leading-relaxed mb-6 md:mb-8">
+                      <div className="text-lg md:text-xl mb-6 text-yellow-500 tracking-tight flex gap-1">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <svg key={i} className="w-4 h-4 md:w-5 md:h-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <p className="text-lg md:text-2xl font-medium italic text-white leading-relaxed mb-8">
                         "{testimonials[currentIndex].text}"
                       </p>
                       
                       {testimonials[currentIndex].stats && (
-                        <div className="space-y-3 mb-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                           {testimonials[currentIndex].stats.map((stat, idx) => (
-                            <div key={idx} className="flex items-center gap-3">
-                              <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                                <svg className="w-3 h-3 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <div key={idx} className="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/5">
+                              <div className="w-6 h-6 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                                <svg className="w-3.5 h-3.5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" />
                                 </svg>
                               </div>
-                              <span className="text-sm md:text-base text-gray-300 font-medium">{stat}</span>
+                              <span className="text-xs md:text-sm text-gray-300 font-semibold tracking-tight">{stat}</span>
                             </div>
                           ))}
                         </div>
                       )}
                     </div>
 
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3 md:gap-4">
-                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cyan-500/20 flex items-center justify-center font-bold text-cyan-400 border border-cyan-500/30 text-sm md:text-base">
+                    <div className="flex items-center justify-between border-t border-white/5 pt-6">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-cyan-500/30 to-blue-500/10 flex items-center justify-center font-black text-white border border-white/10 text-lg shadow-xl">
                           {testimonials[currentIndex].author.split(' ')[1].charAt(0)}
                         </div>
                         <div>
-                          <div className="text-base md:text-lg font-bold text-white">{testimonials[currentIndex].author}</div>
-                          <div className="text-xs md:text-sm text-cyan-400 font-medium">{testimonials[currentIndex].specialty}</div>
-                          <div className="text-[10px] text-gray-500 uppercase tracking-widest mt-1">México</div>
+                          <div className="text-base md:text-xl font-black text-white tracking-tight">{testimonials[currentIndex].author}</div>
+                          <div className="text-xs md:text-sm text-cyan-400 font-bold uppercase tracking-wider">{testimonials[currentIndex].specialty}</div>
                         </div>
                       </div>
+                      <div className="hidden md:block text-[10px] text-gray-600 font-black uppercase tracking-[0.3em] rotate-90 origin-right">Iconic Verified</div>
                     </div>
                   </motion.div>
                 </AnimatePresence>
 
+                {/* Progress Bar for Rotation */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/5 rounded-full overflow-hidden mt-8">
+                  <motion.div
+                    key={currentIndex}
+                    initial={{ width: "0%" }}
+                    animate={{ width: "100%" }}
+                    transition={{ duration: 14, ease: "linear" }}
+                    className="h-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.5)]"
+                  />
+                </div>
+
                 {/* Navigation Controls */}
-                <div className="flex items-center gap-4 mt-6 md:mt-8">
-                  <button 
-                    onClick={prevTestimonial}
-                    className="p-2.5 md:p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-white"
-                  >
-                    <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                    </svg>
-                  </button>
-                  <div className="flex gap-2">
-                    <span className="text-[10px] md:text-xs font-mono text-gray-500">
-                      {currentIndex + 1} <span className="text-white/20">/</span> {testimonials.length}
-                    </span>
+                <div className="flex items-center justify-between mt-12">
+                  <div className="flex items-center gap-4">
+                    <button 
+                      onClick={prevTestimonial}
+                      className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/5 border border-white/10 hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition-all duration-300 flex items-center justify-center text-white group"
+                    >
+                      <svg className="w-5 h-5 md:w-6 md:h-6 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
+                    <button 
+                      onClick={nextTestimonial}
+                      className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/5 border border-white/10 hover:bg-cyan-500 hover:text-black hover:border-cyan-500 transition-all duration-300 flex items-center justify-center text-white group"
+                    >
+                      <svg className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
                   </div>
-                  <button 
-                    onClick={nextTestimonial}
-                    className="p-2.5 md:p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-white"
-                  >
-                    <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </button>
+                  
+                  <div className="flex flex-col items-end">
+                    <span className="text-[10px] md:text-xs font-black text-gray-500 uppercase tracking-[0.2em]">
+                      Expediente <span className="text-white">{currentIndex + 1}</span> de {testimonials.length}
+                    </span>
+                    <div className="flex gap-1 mt-2">
+                      {testimonials.map((_, i) => (
+                        <div 
+                          key={i} 
+                          className={`h-1 rounded-full transition-all duration-500 ${i === currentIndex ? 'w-8 bg-cyan-500' : 'w-2 bg-white/10'}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

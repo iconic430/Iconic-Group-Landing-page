@@ -4,31 +4,40 @@ import { motion } from 'framer-motion';
 
 export const Founder: React.FC = () => {
   return (
-    <section id="fundador" className="py-16 md:py-24 bg-[#0a0a0a] overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section id="fundador" className="py-16 md:py-24 bg-[#0a0a0a] overflow-hidden relative">
+      {/* Background Decorative Text */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15vw] font-black text-white/[0.02] uppercase tracking-[0.2em] pointer-events-none select-none whitespace-nowrap z-0">
+        Iconic Group
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="relative order-1"
             >
-              <div className="aspect-[4/5] bg-white/5 rounded-[2rem] md:rounded-[2.5rem] border border-white/10 overflow-hidden relative group">
+              <div className="aspect-[4/5] bg-white/5 rounded-[2.5rem] md:rounded-[3rem] border border-white/10 overflow-hidden relative group shadow-2xl">
                 {/* Santiago Collado image */}
                 <img 
                   src="https://i.postimg.cc/9Mq0CqFc/E9A121B8-25AB-4956-8156-E13BDC7E43CD.png" 
                   alt="Santiago Collado - Fundador" 
-                  className="w-full h-full object-cover transition-all duration-700"
+                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8">
-                  <h3 className="text-xl md:text-2xl font-bold text-white">Santiago Collado</h3>
-                  <p className="text-cyan-400 font-medium text-sm md:text-base">Fundador, Iconic Group</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                <div className="absolute bottom-8 left-8 md:bottom-10 md:left-10">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="w-8 h-px bg-cyan-500"></span>
+                    <span className="text-[10px] md:text-xs text-cyan-400 font-black uppercase tracking-[0.3em]">Fundador</span>
+                  </div>
+                  <h3 className="text-2xl md:text-4xl font-black text-white tracking-tighter">Santiago Collado</h3>
+                  <p className="text-gray-400 font-bold text-sm md:text-base mt-1">Iconic Group</p>
                 </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-24 h-24 md:w-32 md:h-32 bg-cyan-500/10 blur-[40px] md:blur-[50px] rounded-full" />
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 md:w-48 md:h-48 bg-cyan-500/10 blur-[60px] md:blur-[80px] rounded-full pointer-events-none" />
             </motion.div>
 
             <motion.div 
@@ -44,7 +53,7 @@ export const Founder: React.FC = () => {
                 Después de analizar decenas de clínicas dentales y más de 150 pacientes generados, desarrollé el Protocolo de Triaje Digital: un sistema que no solo atrae, sino que filtra, educa y entrega al dentista solo a quien ya decidió invertir en su salud.
               </p>
               <p className="text-gray-300 text-base md:text-lg leading-relaxed font-medium italic border-l-2 border-cyan-500 pl-5 md:pl-6">
-                Trabajo con máximo 5 clínicas nuevas por trimestre. No por exclusividad artificial, sino porque cada implementación la superviso personalmente.
+                Trabajo con máximo 4 clínicas nuevas por mes. No por exclusividad artificial, sino porque cada implementación la superviso personalmente.
               </p>
             </motion.div>
           </div>

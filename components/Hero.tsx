@@ -9,6 +9,9 @@ interface HeroProps {
 export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
   return (
     <section className="relative min-h-[95vh] flex items-center pt-32 pb-24 overflow-hidden">
+      {/* Subtle Radial Glow behind Hero content */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none z-0"></div>
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -16,12 +19,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto text-center flex flex-col items-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-cyan-400 mb-8 uppercase tracking-[0.2em]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-cyan-400 mb-8 uppercase tracking-[0.2em] backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
             Especialistas en clínicas & consultorios dentales
           </div>
           
-          <h1 className="text-4xl md:text-[3.2rem] font-extrabold leading-[1.1] md:leading-[1.15] mb-6 md:mb-8 tracking-tighter w-full max-w-6xl text-white">
+          <h1 className="text-4xl md:text-[3.8rem] font-black leading-[1.05] md:leading-[1.1] mb-6 md:mb-10 tracking-tighter w-full max-w-6xl text-white">
             En 60 días instalamos un sistema que atrae pacientes listos para invertir <span className="text-gradient">$20,000 MXN en su sonrisa,</span> y los agenda automáticamente
           </h1>
 
@@ -29,23 +32,43 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.8 }}
-            className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-x-6 gap-y-3 mb-10 text-cyan-400/80 font-medium text-sm md:text-base tracking-tight px-4"
+            className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-x-12 gap-y-6 mb-12 px-8 py-6 rounded-[2rem] bg-white/[0.02] border border-white/5 backdrop-blur-md relative group overflow-hidden"
           >
-            <span className="text-center">150+ pacientes calificados generados</span>
-            <span className="hidden md:inline text-white/20">•</span>
-            <span className="text-center">+22 clínicas dentales han confiado en nosotros</span>
-            <span className="hidden md:inline text-white/20">•</span>
-            <span className="text-center">97% de clínicas renuevan el segundo mes</span>
+            {/* Subtle gloss effect on the metrics container */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div className="flex flex-col items-center relative z-10">
+              <span className="text-white font-black text-2xl md:text-3xl tracking-tighter">150+</span>
+              <span className="text-cyan-400/50 text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">Pacientes calificados</span>
+            </div>
+            <span className="hidden md:inline w-px h-10 bg-white/10" />
+            <div className="flex flex-col items-center relative z-10">
+              <span className="text-white font-black text-2xl md:text-3xl tracking-tighter">+22</span>
+              <span className="text-cyan-400/50 text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">Clínicas dentales</span>
+            </div>
+            <span className="hidden md:inline w-px h-10 bg-white/10" />
+            <div className="flex flex-col items-center relative z-10">
+              <span className="text-white font-black text-2xl md:text-3xl tracking-tighter">97%</span>
+              <span className="text-cyan-400/50 text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">Tasa de renovación</span>
+            </div>
           </motion.div>
 
           {/* Contenedor de Video con Proporción 16:9 */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="w-full max-w-[800px] aspect-[16/9] bg-black border border-white/10 rounded-2xl md:rounded-[1.5rem] mb-8 md:mb-12 relative overflow-hidden shadow-2xl shadow-cyan-500/10"
+            animate={{ 
+              opacity: 1, 
+              scale: 1,
+              y: [0, -10, 0]
+            }}
+            transition={{ 
+              opacity: { duration: 0.8, delay: 0.2 },
+              scale: { duration: 0.8, delay: 0.2 },
+              y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+            }}
+            className="w-full max-w-[850px] aspect-[16/9] bg-black border border-white/10 rounded-2xl md:rounded-[2rem] mb-8 md:mb-12 relative overflow-hidden shadow-[0_0_50px_rgba(6,182,212,0.15)] group"
           >
-            <div className="absolute inset-0 overflow-hidden rounded-2xl md:rounded-[1.5rem]">
+            <div className="absolute inset-0 overflow-hidden rounded-2xl md:rounded-[2rem]">
               <iframe
                 id="panda-58f2bbcd-377c-46bf-9c15-7ad44e5d7c4b"
                 src="https://player-vz-9b0754fb-cb5.tv.pandavideo.com/embed/?v=58f2bbcd-377c-46bf-9c15-7ad44e5d7c4b"
@@ -58,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             </div>
             
             {/* Capa de protección estética */}
-            <div className="absolute inset-0 pointer-events-none border border-white/5 rounded-2xl md:rounded-[1.5rem] shadow-[inset_0_0_50px_rgba(0,0,0,0.5)]"></div>
+            <div className="absolute inset-0 pointer-events-none border border-white/5 rounded-2xl md:rounded-[2rem] shadow-[inset_0_0_80px_rgba(0,0,0,0.6)] group-hover:shadow-[inset_0_0_40px_rgba(6,182,212,0.1)] transition-shadow duration-700"></div>
           </motion.div>
 
           <motion.div

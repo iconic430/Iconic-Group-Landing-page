@@ -21,7 +21,11 @@ const faqs = [
   },
   {
     question: "¿Cuántas clínicas atienden al mismo tiempo?",
-    answer: "Máximo 5 clínicas nuevas por trimestre. Cada implementación la supervisa Santiago directamente. No somos una agencia de volumen, somos un equipo de resultado."
+    answer: "Máximo 4 clínicas nuevas por mes. Cada implementación la supervisa Santiago directamente. No somos una agencia de volumen, somos un equipo de resultado."
+  },
+  {
+    question: "¿Para quién NO es el Protocolo de Triaje Digital?",
+    answer: "Este sistema no es para ti si tu clínica factura menos de $100k MXN al mes, si buscas resultados de un día para otro sin comprometerte con el proceso, o si prefieres seguir compitiendo por precio en lugar de posicionarte como la opción premium de tu ciudad. Tampoco trabajamos con clínicas que no tienen capacidad para atender al menos 15 pacientes nuevos al mes — porque nuestro sistema genera demanda real, y si tu operación no puede recibirla, los dos perdemos. Si cumples el perfil, el sistema funciona. Si no lo cumples, te lo decimos en la evaluación antes de comprometer tu tiempo o tu dinero."
   },
   {
     question: "¿Ya trabajan con clínicas en mi ciudad?",
@@ -62,17 +66,17 @@ export const FAQ: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden"
+                className={`group rounded-2xl transition-all duration-500 border ${activeIndex === index ? 'bg-white/[0.05] border-cyan-500/30 shadow-[0_0_30px_rgba(6,182,212,0.1)]' : 'bg-white/[0.02] border-white/5 hover:border-white/10'}`}
               >
                 <button
                   onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                  className="w-full px-6 py-5 md:py-6 text-left flex items-center justify-between gap-4 hover:bg-white/[0.07] transition-colors"
+                  className="w-full px-6 py-6 md:py-8 text-left flex items-center justify-between gap-6 transition-all"
                 >
-                  <span className="text-sm md:text-lg font-bold text-white leading-tight">
+                  <span className={`text-base md:text-xl font-black tracking-tight transition-colors duration-300 ${activeIndex === index ? 'text-white' : 'text-gray-400 group-hover:text-gray-200'}`}>
                     {faq.question}
                   </span>
-                  <div className={`flex-shrink-0 w-6 h-6 rounded-full border border-cyan-500/30 flex items-center justify-center transition-transform duration-300 ${activeIndex === index ? 'rotate-180 bg-cyan-500 text-black' : 'text-cyan-400'}`}>
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className={`flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full border flex items-center justify-center transition-all duration-500 ${activeIndex === index ? 'bg-cyan-500 border-cyan-500 text-black rotate-180 shadow-[0_0_15px_rgba(6,182,212,0.5)]' : 'border-white/10 text-cyan-400 group-hover:border-cyan-500/50'}`}>
+                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
@@ -83,9 +87,9 @@ export const FAQ: React.FC = () => {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
-                      <div className="px-6 pb-6 text-gray-400 text-sm md:text-base leading-relaxed border-t border-white/5 pt-4">
+                      <div className="px-6 pb-8 md:px-8 md:pb-10 text-gray-400 text-sm md:text-lg leading-relaxed border-t border-white/5 pt-6">
                         {faq.answer}
                       </div>
                     </motion.div>
