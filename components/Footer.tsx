@@ -24,13 +24,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateForm, onScrollTo, show
         )}
 
         <div className="grid md:grid-cols-2 gap-12 items-center border-t border-white/5 pt-16">
-          <div className="text-left">
+          <div className="text-center md:text-left">
             <span className="text-2xl font-black tracking-tighter">ICONIC<span className="text-cyan-500">GROUP</span></span>
             <p className="text-gray-500 text-sm mt-4">Growth Partners: Infraestructura de Adquisición de Pacientes para el Sector Salud.</p>
           </div>
 
-          <div className="text-right text-xs text-gray-500 flex flex-col items-end gap-2">
-            <span>Iconic Group © 2025. Todos los derechos reservados.</span>
+          <div className="text-center md:text-right text-xs text-gray-500 flex flex-col items-center md:items-end gap-2">
+            <span>Iconic Group © 2026. Todos los derechos reservados.</span>
             <div className="flex gap-4">
               <span className="hover:text-white cursor-pointer transition-colors">Aviso de Privacidad</span>
               <span className="hover:text-white cursor-pointer transition-colors">Términos de Servicio</span>

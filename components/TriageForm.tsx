@@ -14,12 +14,13 @@ export const TriageForm: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full mx-auto bg-transparent flex justify-center items-center" style={{ minHeight: '576px' }}>
+    <div className="w-full mx-auto bg-transparent flex justify-center items-center" style={{ minHeight: '400px' }}>
       <iframe
         src="https://link.markgrowth.pro/widget/form/L8M9TIz1NLpT2JfEeB0d"
         style={{ 
           width: '100%', 
-          height: '576px',
+          height: '100%',
+          minHeight: '576px',
           border: 'none', 
           borderRadius: '3px',
           backgroundColor: 'transparent',

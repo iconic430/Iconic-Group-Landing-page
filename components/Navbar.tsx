@@ -33,9 +33,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateForm, onScrollTo }) =>
         <div>
           <button 
             onClick={onNavigateForm}
-            className="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 active:scale-95 glow-brand shadow-lg shadow-cyan-500/20"
+            className="bg-cyan-500 hover:bg-cyan-400 text-black px-4 md:px-6 py-2 md:py-2.5 rounded-full text-xs md:text-sm font-bold transition-all transform hover:scale-105 active:scale-95 glow-brand shadow-lg shadow-cyan-500/20"
           >
-            Quiero ver si mi clínica califica
+            <span className="hidden sm:inline">Quiero ver si mi clínica califica</span>
+            <span className="sm:hidden">Calificar clínica</span>
           </button>
         </div>
       </div>
