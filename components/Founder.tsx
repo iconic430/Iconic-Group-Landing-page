@@ -22,7 +22,7 @@ export const Founder: React.FC = () => {
               <div className="aspect-[4/5] bg-white/5 rounded-[2.5rem] md:rounded-[3rem] border border-white/10 overflow-hidden relative group shadow-2xl">
                 {/* Santiago Collado image */}
                 <img 
-                  src="https://i.postimg.cc/9Mq0CqFc/E9A121B8-25AB-4956-8156-E13BDC7E43CD.png" 
+                  src="https://i.postimg.cc/RVFPZtxB/Interior-casa-moderna-202604151824.jpg" 
                   alt="Santiago Collado - Fundador" 
                   className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
                   referrerPolicy="no-referrer"
