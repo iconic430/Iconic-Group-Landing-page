@@ -70,8 +70,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl md:rounded-[2rem]">
               <iframe
-                id="panda-58f2bbcd-377c-46bf-9c15-7ad44e5d7c4b"
-                src="https://player-vz-9b0754fb-cb5.tv.pandavideo.com/embed/?v=58f2bbcd-377c-46bf-9c15-7ad44e5d7c4b"
+                id="panda-ac7edc90-e679-4b3a-9770-db6e0229b760"
+                src="https://player-vz-9b0754fb-cb5.tv.pandavideo.com/embed/?v=ac7edc90-e679-4b3a-9770-db6e0229b760"
                 style={{ border: 'none' }}
                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
                 allowFullScreen={true}
