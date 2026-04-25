@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
 import { Problem } from './components/Problem.tsx';
 import { Solution } from './components/Solution.tsx';
+import { Dependence } from './components/Dependence.tsx';
 import { Benefits } from './components/Benefits.tsx';
 import { SocialProof } from './components/SocialProof.tsx';
 import { Founder } from './components/Founder.tsx';
@@ -68,6 +69,7 @@ const App: React.FC = () => {
       <main className="relative z-10">
         <Hero onNavigateForm={navigateToForm} />
         <Problem />
+        <Dependence />
         <Solution onNavigateForm={navigateToForm} />
         <Benefits />
         <Founder />
