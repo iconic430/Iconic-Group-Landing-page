@@ -15,7 +15,7 @@ const testimonials = [
     stats: [
       "34 consultas calificadas en 60 días",
       "21 tratamientos cerrados",
-      "Ticket promedio: $18,500 MXN"
+      "Ticket promedio: $1,100 USD"
     ]
   },
   {

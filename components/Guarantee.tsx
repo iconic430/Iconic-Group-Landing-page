@@ -27,10 +27,10 @@ export const Guarantee: React.FC = () => {
 
             <div className="space-y-4 md:space-y-6 max-w-3xl">
               <p className="text-lg md:text-2xl text-gray-300 leading-relaxed font-medium">
-                Cada implementación del Protocolo de Triaje Digital viene respaldada por nuestra Garantía IGA:
+                Cada implementación del Sistema de Triaje Digital viene respaldada por nuestra Garantía IGA:
               </p>
               <p className="text-base md:text-xl text-gray-400 leading-relaxed">
-                Si en los primeros 60 días no alcanzamos los objetivos pactados por contrato, el tercer mes no pagas nada.
+                Si en los primeros 60 días no alcanzamos los objetivos pactados por contrato, el tercer mes es completamente gratis para asegurar al menos un retorno de inversión mínimo.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6 pt-6 md:pt-8">
                 <div className="flex items-center gap-3">

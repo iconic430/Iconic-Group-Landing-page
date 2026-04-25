@@ -31,7 +31,7 @@ export const Solution: React.FC<SolutionProps> = ({ onNavigateForm }) => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12 md:mb-20">
           <h2 className="text-3xl md:text-6xl font-extrabold mb-6 leading-tight">
-            Presentando: <span className="text-cyan-400">El Protocolo de Triaje Digital™</span>
+            Presentando: <span className="text-cyan-400">El Sistema de Triaje Digital™</span>
           </h2>
           <p className="text-gray-400 text-base md:text-xl max-w-2xl mx-auto">
             Un sistema de ingeniería aplicado al crecimiento de clínicas que elimina la incertidumbre de tu flujo de pacientes.

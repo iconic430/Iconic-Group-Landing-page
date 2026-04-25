@@ -19,39 +19,40 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto text-center flex flex-col items-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-cyan-400 mb-8 uppercase tracking-[0.2em] backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-            Especialistas en clínicas & consultorios dentales
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[9px] md:text-[10px] font-black text-cyan-400 mb-6 uppercase tracking-[0.2em] backdrop-blur-sm whitespace-nowrap">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
+            Especialistas en clínicas odontologicas
           </div>
           
-          <h1 className="text-4xl md:text-[3.8rem] font-black leading-[1.05] md:leading-[1.1] mb-6 md:mb-10 tracking-tighter w-full max-w-6xl text-white">
-            En 60 días instalamos un sistema que atrae pacientes listos para invertir <span className="text-gradient">$20,000 MXN en su sonrisa,</span> y los agenda automáticamente
+          <h1 className="text-3xl md:text-[3.2rem] font-black leading-[1.1] md:leading-[1.1] mb-6 tracking-tighter w-full max-w-6xl text-white">
+            Instalamos en <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">14 días</span> el sistema que atrae pacientes de <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)] whitespace-nowrap">$2,000 a $5,000 USD</span> por procedimiento y los agenda solo
           </h1>
+          
+          <div className="flex flex-col items-center mb-10 w-full">
+            <p className="text-cyan-400 font-bold uppercase tracking-[0.25em] text-[9px] md:text-xs mb-8 px-4">o sino el tercer mes es gratis</p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.8 }}
-            className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-x-12 gap-y-6 mb-12 px-8 py-6 rounded-[2rem] bg-white/[0.02] border border-white/5 backdrop-blur-md relative group overflow-hidden"
-          >
-            {/* Subtle gloss effect on the metrics container */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-            <div className="flex flex-col items-center relative z-10">
-              <span className="text-white font-black text-2xl md:text-3xl tracking-tighter">150+</span>
-              <span className="text-cyan-400/50 text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">Pacientes calificados</span>
-            </div>
-            <span className="hidden md:inline w-px h-10 bg-white/10" />
-            <div className="flex flex-col items-center relative z-10">
-              <span className="text-white font-black text-2xl md:text-3xl tracking-tighter">+22</span>
-              <span className="text-cyan-400/50 text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">Clínicas dentales</span>
-            </div>
-            <span className="hidden md:inline w-px h-10 bg-white/10" />
-            <div className="flex flex-col items-center relative z-10">
-              <span className="text-white font-black text-2xl md:text-3xl tracking-tighter">97%</span>
-              <span className="text-cyan-400/50 text-[10px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">Tasa de renovación</span>
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.8 }}
+              className="flex flex-row justify-center items-center gap-x-4 md:gap-x-12 px-4 md:px-8 py-3 md:py-6 rounded-2xl md:rounded-[2rem] bg-white/[0.03] border border-white/5 backdrop-blur-md relative group overflow-hidden"
+            >
+              <div className="flex flex-col items-center relative z-10 px-2 md:px-0">
+                <span className="text-white font-black text-lg md:text-3xl tracking-tighter">150+</span>
+                <span className="text-cyan-400/50 text-[7px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">Pacientes calificados</span>
+              </div>
+              <span className="w-px h-6 md:h-10 bg-white/10" />
+              <div className="flex flex-col items-center relative z-10 px-2 md:px-0">
+                <span className="text-white font-black text-lg md:text-3xl tracking-tighter">+22</span>
+                <span className="text-cyan-400/50 text-[7px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">Clínicas dentales</span>
+              </div>
+              <span className="w-px h-6 md:h-10 bg-white/10" />
+              <div className="flex flex-col items-center relative z-10 px-2 md:px-0">
+                <span className="text-white font-black text-lg md:text-3xl tracking-tighter">97%</span>
+                <span className="text-cyan-400/50 text-[7px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">Tasa de renovación</span>
+              </div>
+            </motion.div>
+          </div>
 
           {/* Contenedor de Video con Proporción 16:9 */}
           <motion.div 
@@ -94,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           </motion.div>
           
           <p className="text-lg md:text-2xl text-gray-400 mb-10 md:mb-14 max-w-4xl leading-relaxed px-4 md:px-0">
-            <span className="text-white font-bold">Exclusivo para clínicas dentales en México que ya facturan +$120k y quieren llenar su agenda con el paciente correcto, no con el más barato</span>
+            <span className="text-white font-bold">Exclusivo para clínicas odontológicas que ya facturen +$10,000 USD y quieran escalar con el paciente correcto, no el más barato</span>
           </p>
           
           <button 

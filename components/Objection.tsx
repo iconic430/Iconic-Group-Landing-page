@@ -34,7 +34,7 @@ export const Objection: React.FC = () => {
 
             <div className="bg-cyan-500/10 p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-cyan-500/20 mt-10 md:mt-12">
               <p className="text-lg md:text-2xl text-white font-bold leading-relaxed">
-                Trabajamos exclusivamente con clínicas dentales de alto ticket en México. No atendemos restaurantes, e-commerce ni coaches. Solo dentistas. Solo México. Solo alto valor.
+                Trabajamos exclusivamente con clínicas dentales de alto ticket en Latinoamérica. No atendemos restaurantes, e-commerce ni coaches. Solo dentistas. Solo Latinoamérica. Solo alto valor.
               </p>
               <p className="text-cyan-400 font-bold mt-6 uppercase tracking-widest text-[10px] md:text-sm">
                 Esa especialización es lo que nos permite garantizar resultados por contrato.

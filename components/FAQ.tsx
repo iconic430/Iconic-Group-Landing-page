@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const faqs = [
   {
     question: "¿Esto funciona si mi clínica es nueva o pequeña?",
-    answer: "El Protocolo de Triaje Digital está diseñado para clínicas que ya tienen operación activa y buscan escalar. Si facturas menos de $100k MXN al mes, probablemente aún no es el momento, y te lo diremos en la evaluación antes de comprometer tu tiempo o dinero."
+    answer: "El Sistema de Triaje Digital está diseñado para clínicas que ya tienen presencia y buscan escalar. Si facturas menos de $10,000 USD al mes, probablemente aún no es el momento de implementar este nivel de infraestructura, y te lo diremos con honestidad en la evaluación previa."
   },
   {
     question: "¿En cuánto tiempo veo resultados?",
@@ -24,12 +24,12 @@ const faqs = [
     answer: "Máximo 4 clínicas nuevas por mes. Cada implementación la supervisa Santiago directamente. No somos una agencia de volumen, somos un equipo de resultado."
   },
   {
-    question: "¿Para quién NO es el Protocolo de Triaje Digital?",
-    answer: "Este sistema no es para ti si tu clínica factura menos de $100k MXN al mes, si buscas resultados de un día para otro sin comprometerte con el proceso, o si prefieres seguir compitiendo por precio en lugar de posicionarte como la opción premium de tu ciudad. Tampoco trabajamos con clínicas que no tienen capacidad para atender al menos 15 pacientes nuevos al mes — porque nuestro sistema genera demanda real, y si tu operación no puede recibirla, los dos perdemos. Si cumples el perfil, el sistema funciona. Si no lo cumples, te lo decimos en la evaluación antes de comprometer tu tiempo o tu dinero."
+    question: "¿Para quién NO es el Sistema de Triaje Digital?",
+    answer: "Este sistema no es para ti si tu clínica factura menos de $10,000 USD al mes, si buscas resultados mágicos sin compromiso, o si prefieres seguir compitiendo por precio bajo en lugar de posicionarte como la opción premium. Si cumples el perfil, el sistema funciona. Si no, te lo diremos antes de empezar."
   },
   {
     question: "¿Ya trabajan con clínicas en mi ciudad?",
-    answer: "Tenemos clientes activos en distintas ciudades de México. En la evaluación gratuita revisamos si hay conflicto de nicho en tu zona; si lo hay, te lo decimos antes de arrancar."
+    answer: "Tenemos clientes activos en distintas ciudades de Latinoamérica. En la evaluación gratuita revisamos si hay conflicto de nicho en tu zona; si lo hay, te lo decimos antes de arrancar."
   },
   {
     question: "¿Tienen contrato?",
