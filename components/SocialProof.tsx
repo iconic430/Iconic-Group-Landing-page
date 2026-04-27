@@ -9,8 +9,9 @@ interface SocialProofProps {
 const testimonials = [
   {
     stars: "⭐⭐⭐⭐⭐",
-    author: "Dr. J.F.",
+    author: "Dr. Andrés Ruvalcaba",
     specialty: "Carillas, Guadalajara",
+    image: "https://i.postimg.cc/nLhTB4HT/Dentist-in-clean-202604250024.jpg",
     text: "Llevaba 8 meses recibiendo puros mensajes de '¿cuánto cuesta?' Sin excepciones.",
     stats: [
       "34 consultas calificadas en 60 días",
@@ -20,8 +21,9 @@ const testimonials = [
   },
   {
     stars: "⭐⭐⭐⭐⭐",
-    author: "Dra. M.I.",
+    author: "Dra. María Izaguirre",
     specialty: "Ortodoncia y Blanqueamiento, Culiacán",
+    image: "https://i.postimg.cc/W1CVYL8Z/Dentist-in-blue-202604250040.jpg",
     text: "Mi recepcionista pasaba el 80% del día explicando precios a gente que nunca llegaba.",
     stats: [
       "29 pacientes filtrados listos para consulta en 60 días",
@@ -31,8 +33,9 @@ const testimonials = [
   },
   {
     stars: "⭐⭐⭐⭐⭐",
-    author: "Dr. H.J.",
+    author: "Dr. Angel Vargas",
     specialty: "Prótesis y Rehabilitación Oral, Hermosillo",
+    image: "https://i.postimg.cc/g0248VYN/Dentist-with-Mexican-202604250022.jpg",
     text: "Había probado dos agencias antes. La diferencia es que Iconic me entrega pacientes que ya saben el precio y siguen queriendo la cita.",
     stats: [
       "41 leads calificados en 60 días",
@@ -42,8 +45,9 @@ const testimonials = [
   },
   {
     stars: "⭐⭐⭐⭐⭐",
-    author: "Dra. C.A.",
+    author: "Dr. Mateo Ramírez",
     specialty: "Carillas, CDMX",
+    image: "https://i.postimg.cc/mrgVCYbm/Dentist-with-Mexican-202604250022-(1).jpg",
     text: "En CDMX la competencia es brutal. Con Iconic empecé a recibir pacientes que ya habían visto mis casos, conocían el proceso y llegaban a consulta listos para cerrar.",
     stats: [
       "38 consultas calificadas en 60 días",
@@ -126,8 +130,12 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onNavigateForm }) => {
 
                     <div className="flex items-center justify-between border-t border-white/5 pt-6">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-cyan-500/30 to-blue-500/10 flex items-center justify-center font-black text-white border border-white/10 text-lg shadow-xl">
-                          {testimonials[currentIndex].author.split(' ')[1].charAt(0)}
+                        <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border border-white/10 shadow-xl">
+                          <img 
+                            src={testimonials[currentIndex].image} 
+                            alt={testimonials[currentIndex].author}
+                            className="w-full h-full object-cover object-center"
+                          />
                         </div>
                         <div>
                           <div className="text-base md:text-xl font-black text-white tracking-tight">{testimonials[currentIndex].author}</div>
@@ -191,11 +199,18 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onNavigateForm }) => {
             <div className="relative mt-8 lg:mt-0">
               <div className="absolute inset-0 bg-cyan-500/10 blur-[60px] rounded-full animate-pulse" />
               <div className="relative bg-white/5 p-3 md:p-4 rounded-[2rem] md:rounded-[2.5rem] border border-white/10">
-                 <img 
-                  src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" 
-                  alt="Equipo médico e infraestructura digital" 
-                  className="rounded-[1.5rem] md:rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/3] grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
-                />
+                 <AnimatePresence mode="wait">
+                   <motion.img 
+                    key={currentIndex}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.5 }}
+                    src={testimonials[currentIndex].image} 
+                    alt="Equipo médico e infraestructura digital" 
+                    className="rounded-[1.5rem] md:rounded-[2rem] shadow-2xl w-full object-cover object-center aspect-[4/3] grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+                  />
+                </AnimatePresence>
                 <button 
                   onClick={onNavigateForm}
                   className="absolute -bottom-6 -right-4 md:-bottom-8 md:-right-8 bg-[#0a0a0a] border border-cyan-500/30 p-5 md:p-8 rounded-2xl md:rounded-3xl z-20 shadow-2xl backdrop-blur-xl text-left hover:scale-105 transition-transform active:scale-95"

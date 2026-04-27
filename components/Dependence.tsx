@@ -9,7 +9,7 @@ export const Dependence: React.FC = () => {
     "Cambios del algoritmo",
     "Cientos de mensajes",
     "Humor del consumidor",
-    "Bailes de TikTok"
+    "Contenido viral sin conversión"
   ];
 
   return (

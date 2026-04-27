@@ -19,12 +19,12 @@ export const Founder: React.FC = () => {
               viewport={{ once: true }}
               className="relative order-1"
             >
-              <div className="aspect-[4/5] bg-white/5 rounded-[2.5rem] md:rounded-[3rem] border border-white/10 overflow-hidden relative group shadow-2xl">
+              <div className="bg-white/5 rounded-[2.5rem] md:rounded-[3rem] border border-white/10 overflow-hidden relative group shadow-2xl h-fit">
                 {/* Santiago Collado image */}
                 <img 
-                  src="https://i.postimg.cc/RVFPZtxB/Interior-casa-moderna-202604151824.jpg" 
+                  src="https://i.postimg.cc/dtGt0zpP/El-modelo-debe-202604261844.jpg" 
                   alt="Santiago Collado - Fundador" 
-                  className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
+                  className="w-full h-auto transition-all duration-1000 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
