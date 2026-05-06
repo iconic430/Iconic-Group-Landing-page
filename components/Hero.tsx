@@ -25,26 +25,35 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           </div>
           
           <h1 className="text-3xl md:text-[3.2rem] font-black leading-[1.1] md:leading-[1.1] mb-6 tracking-tighter w-full max-w-6xl text-white">
-            Instalamos en <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">14 días</span> el sistema que atrae pacientes de <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)] whitespace-nowrap">$2,000 a $5,000 USD</span> por procedimiento y los agenda solo
+            Instalamos en <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">14 días</span> el sistema que atrae pacientes de <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)] whitespace-nowrap">$20,000 a $80,000 MXN</span> por procedimiento y los agenda solo
           </h1>
           
           <div className="flex flex-col items-center mb-10 w-full">
-            <p className="text-cyan-400 font-bold uppercase tracking-[0.25em] text-[9px] md:text-xs mb-8 px-4">o sino el tercer mes es gratis</p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="mb-8 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm"
+            >
+              <p className="text-cyan-400 font-black uppercase tracking-[0.2em] text-[10px] md:text-sm">
+                o sino el tercer mes es gratis
+              </p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
-              className="flex flex-row justify-center items-center gap-x-6 md:gap-x-12 px-6 md:px-10 py-4 md:py-6 rounded-2xl md:rounded-[2rem] bg-white/[0.03] border border-white/5 backdrop-blur-md relative group overflow-hidden"
+              className="flex flex-row justify-center items-center gap-x-8 md:gap-x-16 px-8 md:px-14 py-6 md:py-8 rounded-[2rem] md:rounded-[2.5rem] bg-cyan-500/[0.03] border border-cyan-500/20 backdrop-blur-md relative group overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.1)]"
             >
               <div className="flex flex-col items-center relative z-10">
-                <span className="text-white font-black text-xl md:text-3xl tracking-tighter">22</span>
-                <span className="text-cyan-400/50 text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">clínicas en 8 meses</span>
+                <span className="text-white font-black text-2xl md:text-5xl tracking-tighter">22</span>
+                <span className="text-cyan-400/70 text-[10px] md:text-[13px] uppercase tracking-[0.2em] font-black mt-2">clínicas en 8 meses</span>
               </div>
-              <span className="w-px h-8 md:h-10 bg-white/10" />
+              <span className="w-px h-10 md:h-16 bg-white/10" />
               <div className="flex flex-col items-center relative z-10">
-                <span className="text-white font-black text-xl md:text-3xl tracking-tighter">150+</span>
-                <span className="text-cyan-400/50 text-[8px] md:text-[11px] uppercase tracking-[0.2em] font-bold mt-1">pacientes calificados en los últimos 90 días</span>
+                <span className="text-white font-black text-2xl md:text-5xl tracking-tighter">150+</span>
+                <span className="text-cyan-400/70 text-[10px] md:text-[13px] uppercase tracking-[0.2em] font-black mt-2">pacientes calificados en los últimos 90 días</span>
               </div>
             </motion.div>
           </div>
@@ -90,7 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           </motion.div>
           
           <p className="text-lg md:text-2xl text-gray-400 mb-10 md:mb-14 max-w-4xl leading-relaxed px-4 md:px-0">
-            <span className="text-white font-bold">Exclusivo para clínicas odontológicas que ya facturen +$10,000 USD y quieran escalar con el paciente correcto, no el más barato</span>
+            <span className="text-white font-bold">Exclusivo para clínicas odontológicas que ya facturen +$200,000 MXN y quieran escalar con el paciente correcto, no el más barato</span>
           </p>
           
           <button 

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const faqs = [
   {
     question: "¿Esto funciona si mi clínica es nueva o pequeña?",
-    answer: "El Sistema de Triaje Digital está diseñado para clínicas que ya tienen presencia y buscan escalar. Si facturas menos de $10,000 USD al mes, probablemente aún no es el momento de implementar este nivel de infraestructura, y te lo diremos con honestidad en la evaluación previa."
+    answer: "El Sistema de Triaje Digital está diseñado para clínicas que ya tienen presencia y buscan escalar. Si facturas menos de $200,000 MXN al mes, probablemente aún no es el momento de implementar este nivel de infraestructura, y te lo diremos con honestidad en la evaluación previa."
   },
   {
     question: "¿En cuánto tiempo veo resultados?",
@@ -20,12 +20,16 @@ const faqs = [
     answer: "No. Instalamos el sistema encima de lo que ya tienes. Tu equipo solo recibe las citas ya filtradas y listas para confirmar, no necesita aprender a calificar leads ni cambiar su forma de trabajar."
   },
   {
+    question: "¿Los anuncios van a verse genéricos o van a reflejar el nivel de mi clínica?",
+    answer: "Diseñamos cada campaña para reflejar el nivel premium de tu especialidad. Tus pacientes van a llegar habiendo visto casos de tu trabajo, no ofertas de precio."
+  },
+  {
     question: "¿Cuántas clínicas atienden al mismo tiempo?",
-    answer: "Máximo 4 clínicas nuevas por mes. Cada implementación la supervisa Santiago directamente. No somos una agencia de volumen, somos un equipo de resultado."
+    answer: "Máximo 3 clínicas nuevas por mes. Cada implementación la supervisa Santiago directamente. No somos una agencia de volumen, somos un equipo de resultado."
   },
   {
     question: "¿Para quién NO es el Sistema de Triaje Digital?",
-    answer: "Este sistema no es para ti si tu clínica factura menos de $10,000 USD al mes, si buscas resultados mágicos sin compromiso, o si prefieres seguir compitiendo por precio bajo en lugar de posicionarte como la opción premium. Si cumples el perfil, el sistema funciona. Si no, te lo diremos antes de empezar."
+    answer: "Este sistema no es para ti si tu clínica factura menos de $200,000 MXN al mes, si buscas resultados mágicos sin compromiso, o si prefieres seguir compitiendo por precio bajo en lugar de posicionarte como la opción premium. Si cumples el perfil, el sistema funciona. Si no, te lo diremos antes de empezar."
   },
   {
     question: "¿Ya trabajan con clínicas en mi ciudad?",

@@ -16,7 +16,7 @@ const testimonials = [
     stats: [
       "34 consultas calificadas en 60 días",
       "21 tratamientos cerrados",
-      "Ticket promedio: $1,100 USD"
+      "Ticket promedio: $22,000 MXN"
     ]
   },
   {
@@ -63,9 +63,9 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onNavigateForm }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 14000);
+    }, 20000);
     return () => clearInterval(timer);
-  }, []);
+  }, [currentIndex]);
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -153,7 +153,7 @@ export const SocialProof: React.FC<SocialProofProps> = ({ onNavigateForm }) => {
                     key={currentIndex}
                     initial={{ width: "0%" }}
                     animate={{ width: "100%" }}
-                    transition={{ duration: 14, ease: "linear" }}
+                    transition={{ duration: 20, ease: "linear" }}
                     className="h-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.5)]"
                   />
                 </div>
