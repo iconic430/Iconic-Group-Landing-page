@@ -36,8 +36,8 @@ export const Benefits: React.FC = () => {
              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                 <div className="text-4xl group-hover:scale-110 transition-transform">📱</div>
                 <div>
-                   <h3 className="text-xl md:text-2xl font-bold mb-2">Infraestructura Propia</h3>
-                   <p className="text-gray-400 text-sm md:text-base">Te instalamos el CRM y la Iconic App móvil. Un activo tecnológico que te permite tener el control total e informacion de tu clinica digital.</p>
+                   <h3 className="text-xl md:text-2xl font-bold mb-2">Iconic App</h3>
+                   <p className="text-gray-400 text-sm md:text-base">Te instalamos el CRM y la Iconic App móvil. Un activo tecnológico que te permite ver mensajes, agendamientos y todas las metricas</p>
                 </div>
              </div>
           </motion.div>

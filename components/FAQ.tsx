@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: "¿Qué pasa si no funciona?",
-    answer: "Está cubierto por la Garantía IGA: si en 60 días no alcanzamos los objetivos pactados por contrato, el tercer mes es completamente gratis. Sin letras chicas."
+    answer: "Está cubierto por la Garantía IGA: si en 60 días no alcanzamos los objetivos pactados por contrato, el tercer mes es <span class=\"text-white font-bold\">completamente gratis.</span> Sin letras chicas."
   },
   {
     question: "¿Tengo que cambiar todo mi equipo o mis procesos actuales?",
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "¿Ya trabajan con clínicas en mi ciudad?",
-    answer: "Tenemos clientes activos en distintas ciudades de Latinoamérica. En la evaluación gratuita revisamos si hay conflicto de nicho en tu zona; si lo hay, te lo decimos antes de arrancar."
+    answer: "Tenemos clientes activos en distintas ciudades de México. En la evaluación gratuita revisamos si hay conflicto de nicho en tu zona; si lo hay, te lo decimos antes de arrancar."
   },
   {
     question: "¿Tienen contrato?",
@@ -94,7 +94,7 @@ export const FAQ: React.FC = () => {
                       transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
                       <div className="px-6 pb-8 md:px-8 md:pb-10 text-gray-400 text-sm md:text-lg leading-relaxed border-t border-white/5 pt-6">
-                        {faq.answer}
+                        <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                       </div>
                     </motion.div>
                   )}

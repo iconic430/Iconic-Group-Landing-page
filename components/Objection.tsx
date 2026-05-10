@@ -22,7 +22,7 @@ export const Objection: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 text-left mt-12 md:mt-16">
               <div className="bg-white/5 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-white/10 hover:border-cyan-500/30 transition-colors">
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  Las agencias te venden campañas, reportes y reuniones mensuales. Nosotros instalamos infraestructura que trabaja aunque tú no estés en el consultorio.
+                  Las agencias te venden campañas, reportes y reuniones mensuales. Nosotros instalamos una infraestructura que trabaja aunque tú no estés en el consultorio.
                 </p>
               </div>
               <div className="bg-white/5 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-white/10 hover:border-cyan-500/30 transition-colors">
@@ -34,7 +34,7 @@ export const Objection: React.FC = () => {
 
             <div className="bg-cyan-500/10 p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-cyan-500/20 mt-10 md:mt-12">
               <p className="text-lg md:text-2xl text-white font-bold leading-relaxed">
-                Trabajamos exclusivamente con clínicas dentales de alto ticket en Latinoamérica. No atendemos restaurantes, e-commerce ni coaches. Solo dentistas. Solo Latinoamérica. Solo alto valor.
+                Trabajamos exclusivamente con clínicas dentales de alto ticket en México. No atendemos restaurantes, e-commerce ni coaches. Solo dentistas. Solo México. Solo alto valor.
               </p>
               <p className="text-cyan-400 font-bold mt-6 uppercase tracking-widest text-[10px] md:text-sm">
                 Esa especialización es lo que nos permite garantizar resultados por contrato.
