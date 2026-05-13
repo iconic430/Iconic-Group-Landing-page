@@ -44,16 +44,20 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.8 }}
-              className="flex flex-row justify-center items-center gap-x-8 md:gap-x-16 px-8 md:px-14 py-6 md:py-8 rounded-[2rem] md:rounded-[2.5rem] bg-cyan-500/[0.03] border border-cyan-500/20 backdrop-blur-md relative group overflow-hidden shadow-[0_0_30px_rgba(6,182,212,0.1)]"
+              className="flex flex-col md:flex-row justify-center items-center gap-y-4 md:gap-x-12 px-8 py-5 md:py-6 rounded-[2rem] md:rounded-full bg-white/[0.02] border border-white/10 backdrop-blur-md relative group overflow-hidden shadow-2xl"
             >
-              <div className="flex flex-col items-center relative z-10">
-                <span className="text-white font-black text-2xl md:text-5xl tracking-tighter">22</span>
-                <span className="text-cyan-400/70 text-[10px] md:text-[13px] uppercase tracking-[0.2em] font-black mt-2">clínicas en 8 meses</span>
+              <div className="flex items-center gap-3 relative z-10 group/item">
+                <div className="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.8)]" />
+                <p className="text-white font-black text-lg md:text-xl tracking-tight">
+                  +22 <span className="text-cyan-400 font-bold ml-1">Clínicas dentales</span>
+                </p>
               </div>
-              <span className="w-px h-10 md:h-16 bg-white/10" />
-              <div className="flex flex-col items-center relative z-10">
-                <span className="text-white font-black text-2xl md:text-5xl tracking-tighter">150+</span>
-                <span className="text-cyan-400/70 text-[10px] md:text-[13px] uppercase tracking-[0.2em] font-black mt-2">pacientes calificados en los últimos 90 días</span>
+              <span className="hidden md:block w-px h-6 bg-white/10" />
+              <div className="flex items-center gap-3 relative z-10 group/item">
+                <div className="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.8)]" />
+                <p className="text-white font-black text-lg md:text-xl tracking-tight">
+                  +300 <span className="text-cyan-400 font-bold ml-1">Pacientes generados</span>
+                </p>
               </div>
             </motion.div>
           </div>
