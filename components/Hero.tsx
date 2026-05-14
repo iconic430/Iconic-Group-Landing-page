@@ -29,14 +29,17 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           </h1>
           
           <div className="flex flex-col items-center mb-10 w-full">
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-gray-400 font-medium text-sm md:text-xl mb-10 text-center max-w-4xl px-4"
+              className="text-gray-400 font-medium text-sm md:text-xl mb-10 text-center max-w-4xl px-4 space-y-1 md:space-y-2"
             >
-              Implantes, carillas, All-on-4. <span className="text-cyan-400 font-bold">Garantía:</span> si en 60 días no te entrega <span className="text-white font-black">$200,000 MXN extra</span>, el mes 3 es nuestro.
-            </motion.p>
+              <p>Implantes, carillas, All-on-4 y prótesis completa.</p>
+              <p>
+                Si en <span className="text-white font-bold">60 días</span> no te entrega <span className="text-white font-black">200,000 MXN extra</span>, el mes 3 es <span className="text-white font-bold">gratis</span>
+              </p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 10 }}

@@ -53,7 +53,7 @@ export const Founder: React.FC = () => {
                 Después de analizar decenas de clínicas dentales y más de 1,240 citas generadas, desarrollé el Sistema de Triaje Digital: un sistema que no solo atrae, sino que filtra, educa y entrega al dentista solo a quien ya decidió invertir en su sonrisa.
               </p>
               <p className="text-gray-300 text-base md:text-lg leading-relaxed font-medium italic border-l-2 border-cyan-500 pl-5 md:pl-6">
-                Trabajo con máximo 3 clínicas nuevas por mes. No por exclusividad artificial, sino porque cada implementación la superviso personalmente.
+                En Iconic Group trabajamos con máximo 3 clínicas nuevas por mes. No por exclusividad artificial, sino porque cada implementación la superviso personalmente.
               </p>
             </motion.div>
           </div>
