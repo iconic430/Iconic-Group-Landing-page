@@ -21,24 +21,22 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[9px] md:text-[10px] font-black text-cyan-400 mb-6 uppercase tracking-[0.2em] backdrop-blur-sm whitespace-nowrap">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
-            Especialistas en clínicas odontológicas
+            ESPECIALISTAS EN CLÍNICAS ODONTOLÓGICAS
           </div>
           
-          <h1 className="text-3xl md:text-[3.2rem] font-black leading-[1.1] md:leading-[1.1] mb-6 tracking-tighter w-full max-w-6xl text-white">
-            Instalamos en <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">14 días</span> el sistema que atrae pacientes de <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)] whitespace-nowrap">$20,000 a $80,000 MXN</span> por procedimiento y los agenda solo
+          <h1 className="text-2xl sm:text-4xl md:text-[3.2rem] font-black leading-[1.1] md:leading-[1.1] mb-6 tracking-tighter w-full max-w-6xl text-white">
+            Instalamos en <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">14 días</span> el sistema que atrae pacientes de <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]">$20,000 a $200,000 MXN</span> por procedimiento y los agenda automáticamente
           </h1>
           
           <div className="flex flex-col items-center mb-10 w-full">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+            <motion.p
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="mb-8 px-5 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 backdrop-blur-sm"
+              className="text-gray-400 font-medium text-sm md:text-xl mb-10 text-center max-w-4xl px-4"
             >
-              <p className="text-cyan-400 font-black uppercase tracking-[0.2em] text-[10px] md:text-sm">
-                o sino el tercer mes es gratis
-              </p>
-            </motion.div>
+              Implantes, carillas, All-on-4. <span className="text-cyan-400 font-bold">Garantía:</span> si en 60 días no te entrega <span className="text-white font-black">$200,000 MXN extra</span>, el mes 3 es nuestro.
+            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -56,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
               <div className="flex items-center gap-3 relative z-10 group/item">
                 <div className="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.8)]" />
                 <p className="text-white font-black text-lg md:text-xl tracking-tight">
-                  +300 <span className="text-cyan-400 font-bold ml-1">Pacientes generados</span>
+                  +1,240 <span className="text-cyan-400 font-bold ml-1">Citas generadas</span>
                 </p>
               </div>
             </motion.div>
