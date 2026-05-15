@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             >
               <p>Implantes, carillas, All-on-4 y prótesis completa.</p>
               <p>
-                Si en <span className="text-white font-bold">60 días</span> no te entrega <span className="text-white font-black">200,000 MXN extra</span>, el mes 3 es <span className="text-white font-bold">gratis</span>
+                Si en <span className="text-white font-bold">60 días</span> no te entrega <span className="text-white font-black">40 citas calificadas extra</span>, el mes 3 es <span className="text-white font-bold">gratis</span>
               </p>
             </motion.div>
 

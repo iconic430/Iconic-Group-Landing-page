@@ -22,7 +22,7 @@ export const Benefits: React.FC = () => {
             </div>
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Cero Curiosos</h3>
             <p className="text-gray-400 text-base md:text-lg">
-              Tu equipo de recepcion solo tendrá que hablar con la gente en tu clinica mientras que una IA se encarga de contestar los WhatsApps
+              Tu equipo de recepción solo tendrá que hablar con la gente en tu clínica mientras que una IA se encarga de contestar los WhatsApps
             </p>
           </motion.div>
 
@@ -37,7 +37,7 @@ export const Benefits: React.FC = () => {
                 <div className="text-4xl group-hover:scale-110 transition-transform">📱</div>
                 <div>
                    <h3 className="text-xl md:text-2xl font-bold mb-2">Iconic App</h3>
-                   <p className="text-gray-400 text-sm md:text-base">Te instalamos el CRM y la Iconic App móvil. Un activo tecnológico que te permite ver mensajes, agendamientos y todas las metricas</p>
+                   <p className="text-gray-400 text-sm md:text-base">Te instalamos el CRM y la Iconic App móvil. Un activo tecnológico que te permite ver mensajes, agendamientos y todas las métricas</p>
                 </div>
              </div>
           </motion.div>
