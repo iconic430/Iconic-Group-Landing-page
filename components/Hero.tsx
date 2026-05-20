@@ -63,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             </motion.div>
           </div>
 
-          {/* Contenedor de Video con Proporción 16:9 */}
+          {/* Contenedor de Video con Proporción 9:16 Vertical */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ 
@@ -76,17 +76,19 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
               scale: { duration: 0.8, delay: 0.2 },
               y: { duration: 6, repeat: Infinity, ease: "easeInOut" }
             }}
-            className="w-full max-w-[850px] aspect-[16/9] bg-black border border-white/10 rounded-2xl md:rounded-[2rem] mb-8 md:mb-12 relative overflow-hidden shadow-[0_0_50px_rgba(6,182,212,0.15)] group"
+            className="w-full max-w-[340px] bg-black border border-white/10 rounded-2xl md:rounded-[2rem] mb-8 md:mb-12 relative overflow-hidden shadow-[0_0_50px_rgba(6,182,212,0.15)] group"
+            style={{ aspectRatio: '9/16' }}
           >
             <div className="absolute inset-0 overflow-hidden rounded-2xl md:rounded-[2rem]">
               <iframe
-                id="panda-ac7edc90-e679-4b3a-9770-db6e0229b760"
-                src="https://player-vz-9b0754fb-cb5.tv.pandavideo.com/embed/?v=ac7edc90-e679-4b3a-9770-db6e0229b760"
+                id="panda-530493da-0c91-40a8-992e-70993897d788"
+                src="https://player-vz-9b0754fb-cb5.tv.pandavideo.com/embed/?v=530493da-0c91-40a8-992e-70993897d788"
                 style={{ border: 'none' }}
                 allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
                 allowFullScreen={true}
                 className="absolute w-full h-full border-0"
                 title="Iconic Group Presentation Video"
+                fetchPriority="high"
               ></iframe>
             </div>
             
