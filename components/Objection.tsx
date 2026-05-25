@@ -1,43 +1,59 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
 export const Objection: React.FC = () => {
+  const chips = [
+    { text: "SOLO DENTISTAS", icon: "🦷" },
+    { text: "SOLO MÉXICO", icon: "🇲🇽" },
+    { text: "SOLO ALTO TICKET", icon: "💎" }
+  ];
+
   return (
-    <section id="objecion" className="py-16 md:py-24 bg-[#0d0d0d] relative overflow-hidden">
+    <section id="objecion" className="py-24 bg-[#0a0a0a] relative overflow-hidden border-t border-white/5 scroll-mt-20">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none" />
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 w-full max-w-6xl">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="space-y-6 md:space-y-8"
+            transition={{ duration: 0.6 }}
+            className="flex flex-col items-center"
           >
-            <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-tight">
+            {/* Headline */}
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black mb-6 tracking-tighter text-white uppercase italic leading-tight">
               No somos una agencia. <span className="text-cyan-400">Y esa es exactamente la diferencia.</span>
             </h2>
+            <div className="w-20 h-1 bg-cyan-500 mb-12 rounded-full" />
             
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 text-left mt-12 md:mt-16">
-              <div className="bg-white/5 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-white/10 hover:border-cyan-500/30 transition-colors">
-                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  Las agencias te venden campañas, reportes y reuniones mensuales. Nosotros instalamos una infraestructura que trabaja aunque tú no estés en el consultorio.
-                </p>
-              </div>
-              <div className="bg-white/5 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-white/10 hover:border-cyan-500/30 transition-colors">
-                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  Una agencia optimiza por clics. Nosotros optimizamos por sillón ocupado.
-                </p>
-              </div>
+            {/* 3 chips/badges visuales */}
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-12">
+              {chips.map((chip, idx) => (
+                <div 
+                  key={idx}
+                  className="flex items-center gap-2 px-5 py-3 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs md:text-sm text-cyan-300 font-extrabold tracking-widest font-mono uppercase shadow-md hover:bg-cyan-500/20 transition-colors"
+                >
+                  <span>{chip.icon}</span>
+                  <span>{chip.text}</span>
+                </div>
+              ))}
             </div>
 
-            <div className="bg-cyan-500/10 p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-cyan-500/20 mt-10 md:mt-12">
-              <p className="text-lg md:text-2xl text-white font-bold leading-relaxed">
-                Trabajamos exclusivamente con clínicas dentales de alto ticket en México. No atendemos restaurantes, e-commerce ni coaches. Solo dentistas. Solo México. Solo alto valor.
+            {/* Three logical paragraphs block */}
+            <div className="space-y-6 md:space-y-8 text-left max-w-3xl bg-white/[0.01] border border-white/5 rounded-3xl p-6 md:p-10 shadow-2xl relative">
+              <div className="absolute -top-10 -left-6 text-cyan-400/5 font-black text-9xl pointer-events-none font-mono">VS</div>
+              
+              <p className="text-gray-300 text-sm md:text-lg leading-relaxed border-l-2 border-red-500/40 pl-4 md:pl-6">
+                Las agencias optimizan por clics. Nosotros optimizamos por <span className="text-white font-bold">sillón ocupado</span>.
               </p>
-              <p className="text-cyan-400 font-bold mt-6 uppercase tracking-widest text-[10px] md:text-sm">
-                Esa especialización es lo que nos permite garantizar resultados por contrato.
+              
+              <p className="text-gray-300 text-sm md:text-lg leading-relaxed border-l-2 border-cyan-500/40 pl-4 md:pl-6">
+                Las agencias atienden restaurantes, e-commerce, coaches y &quot;lo que entre&quot;. Nosotros trabajamos <span className="text-white font-extrabold">exclusivamente con clínicas dentales mexicanas de alto ticket</span>. No atendemos otros nichos. No queremos.
+              </p>
+              
+              <p className="text-gray-200 font-semibold text-sm md:text-lg leading-relaxed border-l-2 border-cyan-500 pl-4 md:pl-6 bg-cyan-500/5 py-3 rounded-r-xl">
+                Esa especialización es lo que nos permite <span className="text-cyan-400 font-black">garantizar resultados por contrato</span>, y la razón por la que solo aceptamos 3 clínicas nuevas por mes.
               </p>
             </div>
           </motion.div>
