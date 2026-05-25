@@ -6,6 +6,46 @@ interface HeroProps {
   onNavigateForm: () => void;
 }
 
+const clinics = [
+  {
+    image: "https://i.postimg.cc/Jn3ZwJYJ/Logo-cli-nica-ontolo-gica-negro-bl-202605242144.jpg",
+    name: "Clínica 1",
+    location: "CDMX"
+  },
+  {
+    image: "https://i.postimg.cc/cH7wqYk6/Logo-clinic-dental-smile-202605242145.jpg",
+    name: "Clínica 2",
+    location: "Monterrey"
+  },
+  {
+    image: "https://i.postimg.cc/FRb3tcCS/Logo-Portal-Dental-Clinic-202605242144.jpg",
+    name: "Clínica 3",
+    location: "Guadalajara"
+  },
+  {
+    image: "https://i.postimg.cc/Dy0J6thC/Insignia-Clinic-logo-design-202605242144.jpg",
+    name: "Clínica 4",
+    location: "Querétaro"
+  },
+  {
+    image: "https://i.postimg.cc/BngvGpJG/logo-de-clinica-dental-202605242149.jpg",
+    name: "Clínica 5",
+    location: "Puebla"
+  },
+  {
+    image: "https://i.postimg.cc/YC3SwRt7/logo-de-clinica-dental-202605242150.jpg",
+    name: "Clínica 6",
+    location: "Mérida"
+  },
+  {
+    image: "https://i.postimg.cc/rwJpLjqX/logo-de-clinica-dental-202605242151.jpg",
+    name: "Clínica 7",
+    location: "Querétaro"
+  }
+];
+
+const duplicatedClinics = [...clinics, ...clinics, ...clinics];
+
 export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
   return (
     <section className="relative min-h-[95vh] flex items-center pt-32 pb-24 overflow-hidden">
@@ -37,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             >
               <p>Implantes, carillas, All-on-4 y prótesis completa.</p>
               <p>
-                Si en <span className="text-white font-bold">60 días</span> no te entrega <span className="text-white font-black">40 citas calificadas extra</span>, el mes 3 es <span className="text-white font-bold">gratis</span>
+                <span className="text-white font-black">40 citas agendadas extras</span> en menos de <span className="text-white font-bold">60 días</span>. Garantizado por contrato
               </p>
             </motion.div>
 
@@ -106,8 +146,41 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           </motion.div>
           
           <p className="text-lg md:text-2xl text-gray-400 mb-10 md:mb-14 max-w-4xl leading-relaxed px-4 md:px-0">
-            <span className="text-white font-bold">Exclusivo para clínicas odontológicas que ya facturen +$200,000 MXN y quieran escalar con el paciente correcto, no el más barato</span>
+            <span className="text-white font-bold">El resultado: dejas de quemar dinero en leads basura, tu equipo cierra tickets altos sin dar descuentos, y tu clínica factura más sin depender de ti</span>
           </p>
+
+          {/* Carrusel de Clínicas Infinito */}
+          <div className="w-full max-w-5xl overflow-hidden relative py-4 mb-12 select-none">
+            {/* Difuminados en los bordes para transición suave */}
+            <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none" />
+            
+            <motion.div
+              className="flex gap-4 md:gap-6 w-max"
+              animate={{ x: [0, "-33.333%"] }}
+              transition={{
+                ease: "linear",
+                duration: 25,
+                repeat: Infinity,
+              }}
+            >
+              {duplicatedClinics.map((clinic, idx) => (
+                <div 
+                  key={idx}
+                  className="flex-shrink-0 flex items-center justify-center p-1"
+                >
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden relative border-2 border-white/10 hover:border-cyan-500/50 transition-colors duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)]">
+                    <img 
+                      src={clinic.image} 
+                      alt="Clínica"
+                      referrerPolicy="no-referrer"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
           
           <button 
             onClick={onNavigateForm}
