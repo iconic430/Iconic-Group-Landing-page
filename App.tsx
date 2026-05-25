@@ -5,9 +5,7 @@ import { Hero } from './components/Hero.tsx';
 import { Problem } from './components/Problem.tsx';
 import { Solution } from './components/Solution.tsx';
 import { Dependence } from './components/Dependence.tsx';
-import { Frustrations } from './components/Frustrations.tsx';
 import { Benefits } from './components/Benefits.tsx';
-import { SocialProof } from './components/SocialProof.tsx';
 import { Founder } from './components/Founder.tsx';
 import { Objection } from './components/Objection.tsx';
 import { Guarantee } from './components/Guarantee.tsx';
@@ -71,12 +69,10 @@ const App: React.FC = () => {
         <Hero onNavigateForm={navigateToForm} />
         <Problem />
         <Dependence />
-        <Frustrations />
         <Solution onNavigateForm={navigateToForm} />
-        <Benefits />
-        <Founder />
-        <SocialProof onNavigateForm={navigateToForm} />
+        <Benefits onNavigateForm={navigateToForm} />
         <Objection />
+        <Founder onNavigateForm={navigateToForm} />
         <Guarantee />
         <FAQ />
         
