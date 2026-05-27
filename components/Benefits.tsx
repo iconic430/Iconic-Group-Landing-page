@@ -13,15 +13,17 @@ export const Benefits: React.FC<BenefitsProps> = ({ onNavigateForm }) => {
       title: "Pilar 1: Autoridad de Marca y Tráfico de Alta Intención",
       subhead: "Posicionamiento como la clínica #1 de tu ciudad",
       body: "No usamos anuncios genéricos. Producimos creativos que educan al paciente antes del click: explican por qué un implante de calidad cuesta $25,000 MXN y no $8,000, y por qué tu clínica es la indicada. Resultado: el lead llega pre-vendido al precio.",
-      visualBadge: "AUTORIDAD MÉDICA"
+      visualBadge: "AUTORIDAD MÉDICA",
+      imageUrl: "https://i.postimg.cc/QCSzyhfy/Odontologo-con-autoridad-en-video-202605271040.jpg"
     },
     {
       num: "02",
       icon: "🤖",
       title: "Pilar 2: Filtrado Inteligente con IA Médica",
       subhead: "Inteligencia artificial entrenada en consulta dental",
-      body: "Una IA entrenada específicamente para el lenguaje dental atiende cada mensaje en menos de 60 segundos. Hace triaje, califica intención de compra, descarta a quien busca lo más barato y propone horarios. Tu recepcionista deja de explicar precios y empieza a recibir pacientes confirmados.",
-      visualBadge: "TRIAJE IA FLUJO"
+      body: "Una IA entrenada específicamente para el lenguaje dental atiende cada mensaje en menos de 60 segundos. Hace triaje, califica intención de compra, descarta a quien busca lo más barato y propone horarios. Tu recepcionista deja de explicar precios and empieza a recibir pacientes confirmados.",
+      visualBadge: "TRIAJE IA FLUJO",
+      imageUrl: "https://i.postimg.cc/2jxg67Cr/Sales-funnel-filtering-prospects-202605271048.jpg"
     },
     {
       num: "03",
@@ -95,20 +97,40 @@ export const Benefits: React.FC<BenefitsProps> = ({ onNavigateForm }) => {
               </div>
 
               {/* Sugerido visual element */}
-              <div className="lg:w-72 flex-shrink-0 flex items-center justify-center bg-[#111] border border-white/5 rounded-2xl p-6 relative overflow-hidden group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/0 to-cyan-500/10 blur-[20px] pointer-events-none group-hover:to-cyan-500/25 transition-all duration-700" />
-                <div className="text-center relative z-10 select-none">
-                  <span className="text-cyan-500 font-bold text-xs uppercase tracking-widest block mb-2 font-mono">
-                    ✦ {pillar.visualBadge}
-                  </span>
-                  <div className="w-16 h-16 rounded-full bg-cyan-500/10 mx-auto flex items-center justify-center text-cyan-400 text-2xl border border-cyan-500/30 group-hover:scale-110 transition-transform duration-500 shadow-lg shadow-cyan-500/10">
-                    👑
+              {pillar.imageUrl ? (
+                <div className={`flex-shrink-0 relative overflow-hidden rounded-2xl border border-white/5 group flex ${
+                  pillar.num === "01" 
+                    ? "w-full sm:w-[240px] md:w-[280px] lg:w-[240px] xl:w-[280px] aspect-[9/16]" 
+                    : "lg:w-72 aspect-video lg:aspect-auto min-h-[220px]"
+                }`}>
+                  <img 
+                    src={pillar.imageUrl} 
+                    alt={pillar.title} 
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
+                    <span className="text-cyan-400 font-bold text-xs uppercase tracking-widest font-mono">
+                      ✦ {pillar.visualBadge}
+                    </span>
                   </div>
-                  <span className="text-gray-500 text-[10px] uppercase font-mono tracking-wider block mt-3">
-                    Iconic App Verified
-                  </span>
                 </div>
-              </div>
+              ) : (
+                <div className="lg:w-72 flex-shrink-0 flex items-center justify-center bg-[#111] border border-white/5 rounded-2xl p-6 relative overflow-hidden group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/0 to-cyan-500/10 blur-[20px] pointer-events-none group-hover:to-cyan-500/25 transition-all duration-700" />
+                  <div className="text-center relative z-10 select-none">
+                    <span className="text-cyan-500 font-bold text-xs uppercase tracking-widest block mb-1 font-mono">
+                      ✦ {pillar.visualBadge}
+                    </span>
+                    <div className="w-16 h-16 rounded-full bg-cyan-500/10 mx-auto flex items-center justify-center text-cyan-400 text-2xl border border-cyan-500/30 group-hover:scale-110 transition-transform duration-500 shadow-lg shadow-cyan-500/10">
+                      👑
+                    </div>
+                    <span className="text-gray-500 text-[10px] uppercase font-mono tracking-wider block mt-3">
+                      Iconic App Verified
+                    </span>
+                  </div>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
