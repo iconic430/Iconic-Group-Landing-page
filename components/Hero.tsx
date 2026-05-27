@@ -60,14 +60,14 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           className="max-w-7xl mx-auto text-center flex flex-col items-center"
         >
           {/* Pre-header */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[9px] md:text-[10px] font-black text-cyan-400 mb-6 uppercase tracking-[0.2em] backdrop-blur-sm whitespace-nowrap">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
-            ESPECIALISTAS EN CLÍNICAS ODONTOLÓGICAS DE ALTO TICKET · MÉXICO
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-2xl sm:rounded-full bg-white/5 border border-white/10 text-[8px] sm:text-[9px] md:text-[10px] font-black text-cyan-400 mb-6 uppercase tracking-[0.12em] sm:tracking-[0.2em] backdrop-blur-sm max-w-[90vw] sm:max-w-none">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse flex-shrink-0" />
+            <span className="text-center leading-normal">ESPECIALISTAS EN CLÍNICAS ODONTOLÓGICAS DE ALTO TICKET · MÉXICO</span>
           </div>
           
           {/* Headline principal (H1) */}
           <h1 className="text-3xl sm:text-5xl md:text-[3.5rem] font-black leading-[1.1] md:leading-[1.15] mb-6 tracking-tighter w-full max-w-5xl text-white">
-            Llenamos tu agenda con pacientes que <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">pagan tratamientos de $20,000 a $200,000 MXN</span>, en 14 días.
+            Llenamos tu agenda con pacientes que <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">pagan tratamientos de $20,000 a $200,000 MXN</span> en 14 días.
           </h1>
           
           {/* Subheadline and Bullets */}
@@ -81,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             </p>
 
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-xs md:text-sm text-cyan-300 font-semibold mb-8">
-              🛡️ <span className="text-white font-black">40 citas extras en 60 dias.</span> Firmado por contrato.
+              <span className="text-white font-black">40 citas extras en 60 dias.</span> Firmado por contrato.
             </div>
           </div>
 

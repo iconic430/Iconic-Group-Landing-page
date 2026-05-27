@@ -10,7 +10,7 @@ export const Benefits: React.FC<BenefitsProps> = ({ onNavigateForm }) => {
     {
       num: "01",
       icon: "🩺",
-      title: "Pilar 1: Autoridad de Marca y Tráfico de Alta Intención",
+      title: "Pilar 1: Brand Authority y Tráfico Calificado",
       subhead: "Posicionamiento como la clínica #1 de tu ciudad",
       body: "No usamos anuncios genéricos. Producimos creativos que educan al paciente antes del click: explican por qué un implante de calidad cuesta $25,000 MXN y no $8,000, y por qué tu clínica es la indicada. Resultado: el lead llega pre-vendido al precio.",
       visualBadge: "AUTORIDAD MÉDICA",
