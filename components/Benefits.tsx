@@ -14,7 +14,7 @@ export const Benefits: React.FC<BenefitsProps> = ({ onNavigateForm }) => {
       subhead: "Posicionamiento como la clínica #1 de tu ciudad",
       body: "No usamos anuncios genéricos. Producimos creativos que educan al paciente antes del click: explican por qué un implante de calidad cuesta $25,000 MXN y no $8,000, y por qué tu clínica es la indicada. Resultado: el lead llega pre-vendido al precio.",
       visualBadge: "AUTORIDAD MÉDICA",
-      imageUrl: "https://i.postimg.cc/QCSzyhfy/Odontologo-con-autoridad-en-video-202605271040.jpg"
+      imageUrl: "https://i.postimg.cc/8ckBWnSX/foto-hiper-realista-de-un-202606021432.jpg"
     },
     {
       num: "02",
@@ -31,7 +31,8 @@ export const Benefits: React.FC<BenefitsProps> = ({ onNavigateForm }) => {
       title: "Pilar 3: Agendamiento Directo en Google Calendar",
       subhead: "Tecnología propia: la Iconic App",
       body: "La cita se agenda automáticamente en el Google Calendar del dueño y del operatorio asignado. Ves cada paciente, mensaje y métrica desde la Iconic App en tu teléfono. Sin Excel, sin hojas, sin \"el lunes te paso el reporte\".",
-      visualBadge: "GOOGLE CALENDAR SYNC"
+      visualBadge: "GOOGLE CALENDAR SYNC",
+      imageUrl: "https://i.postimg.cc/50zNgxfh/iphone-15-con-una-app-202606021441.jpg"
     }
   ];
 
@@ -99,7 +100,7 @@ export const Benefits: React.FC<BenefitsProps> = ({ onNavigateForm }) => {
               {/* Sugerido visual element */}
               {pillar.imageUrl ? (
                 <div className={`flex-shrink-0 relative overflow-hidden rounded-2xl border border-white/5 group flex ${
-                  pillar.num === "01" 
+                  pillar.num === "01" || pillar.num === "03"
                     ? "w-full sm:w-[240px] md:w-[280px] lg:w-[240px] xl:w-[280px] aspect-[9/16]" 
                     : "lg:w-72 aspect-video lg:aspect-auto min-h-[220px]"
                 }`}>
