@@ -36,8 +36,25 @@ export default function App() {
     formElement?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToInsurances = () => {
+    const insurancesElement = document.getElementById("seccion-seguros");
+    insurancesElement?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      {/* Top Banner - USA Insurances Link */}
+      <div 
+        onClick={scrollToInsurances}
+        className="bg-brand-navy text-white text-center py-2.5 px-4 cursor-pointer hover:bg-brand-navy/95 transition-all flex items-center justify-center gap-2 text-[11px] font-extrabold uppercase tracking-widest relative z-50 shrink-0 select-none border-b border-white/5 shadow-sm"
+      >
+        <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse" />
+        <span>Aceptamos tu seguro dental estadounidense</span>
+        <span className="text-brand-cyan font-black hover:underline flex items-center gap-0.5">
+          Ver detalles <ChevronRight size={12} />
+        </span>
+      </div>
+
       {/* Navigation - Mobile Optimized */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 px-4 py-4">
         <div className="flex justify-between items-center max-w-md mx-auto">
@@ -175,7 +192,7 @@ export default function App() {
             <div className="bg-white/80 backdrop-blur-sm rounded-xl py-2 px-4 inline-flex items-center gap-2 mb-5 border border-brand-cyan/10 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-brand-cyan animate-pulse" />
               <span className="text-[11px] font-extrabold text-brand-navy">
-                Válido únicamente hasta el <span className="text-brand-cyan underline decoration-2 decoration-brand-cyan/30">25 de junio</span>
+                Válido por tiempo limitado
               </span>
             </div>
 
@@ -304,6 +321,46 @@ export default function App() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Insurances Section - USA Dental Insurances */}
+      <section id="seccion-seguros" className="py-12 px-4 bg-white border-t border-gray-100">
+        <div className="max-w-md mx-auto">
+          <div className="text-center mb-8">
+            <span className="text-[10px] uppercase tracking-wider font-extrabold text-brand-cyan">Tranquilidad para tu Bolsillo</span>
+            <h2 className="text-2xl font-black text-brand-navy mt-1">Aseguranzas Dentales USA</h2>
+            <p className="text-xs text-brand-steel mt-1.5 px-2">
+              Facilitamos tu reembolso dental en los EE. UU. Aceptamos y te ayudamos a tramitar la documentación para las principales coberturas:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              "Ameritas",
+              "Anthem BlueCross BlueShield",
+              "Blue Cross and Blue Shield",
+              "Cigna",
+              "Delta Dental",
+              "Guardian",
+              "MetLife",
+              "United Health Care"
+            ].map((insurance, index) => (
+              <div 
+                key={index} 
+                className="flex items-center gap-2 p-3.5 rounded-2xl bg-gray-50 border border-gray-100/80 shadow-xs hover:border-brand-cyan/20 transition-all duration-300"
+              >
+                <div className="w-1.5 h-1.5 rounded-full bg-brand-cyan shrink-0 animate-pulse" />
+                <span className="text-[11px] font-extrabold text-brand-navy leading-snug uppercase tracking-tight">{insurance}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 p-4 rounded-2xl bg-brand-cyan/5 border border-brand-cyan/10 text-center">
+            <p className="text-xs text-brand-navy font-semibold leading-relaxed">
+              ¿No ves tu seguro dental? <span className="font-extrabold text-brand-cyan">Contáctanos</span> para verificar su elegibilidad. Te proporcionamos la documentación con codificación ADA.
+            </p>
           </div>
         </div>
       </section>
