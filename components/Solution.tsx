@@ -77,7 +77,7 @@ export const Solution: React.FC<SolutionProps> = ({ onNavigateForm }) => {
         {/* Closing details highlighting numbers */}
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed font-semibold">
-            Todo instalado en <span className="text-cyan-400">14 días</span>. Solo necesitamos <span className="text-white">2 horas de tu tiempo</span> para el onboarding.
+            Todo instalado en <span className="text-cyan-400">14 días</span>. Solo necesitamos <span className="text-white">2 horas de tu tiempo</span> para instalarlo.
           </p>
           
           <button

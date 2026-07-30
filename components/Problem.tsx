@@ -49,7 +49,7 @@ export const Problem: React.FC = () => {
             <div className="w-20 h-1 bg-red-500 mb-8 rounded-full" />
             
             <p className="text-gray-300 text-lg md:text-2xl max-w-3xl leading-relaxed mb-4">
-              Tienes un odontólogo estético o implantólogo formado en el extranjero, aparatología de <span className="text-white font-bold">$80,000 USD</span> y procesos clínicos impecables.
+              Tienes un odontólogo estético o implantólogo formado en el extranjero, aparatología de <span className="text-white font-bold">$80,000 MXN</span> y procesos clínicos impecables.
             </p>
             <p className="text-gray-300 text-lg md:text-2xl max-w-3xl leading-relaxed">
               Y aun así sigues compitiendo contra el dentista de la esquina que cobra la mitad.

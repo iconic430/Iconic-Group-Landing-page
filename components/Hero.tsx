@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           
           {/* Headline principal (H1) */}
           <h1 className="text-3xl sm:text-5xl md:text-[3.5rem] font-black leading-[1.1] md:leading-[1.15] mb-6 tracking-tighter w-full max-w-5xl text-white">
-            Llenamos tu agenda con pacientes que <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">pagan tratamientos de $20,000 a $200,000 MXN</span> en 14 días.
+            Llenamos tu agenda con pacientes que <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">pagan tratamientos de $20,000 a $200,000 MXN</span> en 30 días.
           </h1>
           
           {/* Subheadline and Bullets */}
@@ -210,11 +210,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             </div>
           </motion.div>
 
-          {/* Rating */}
-          <div className="flex items-center gap-1.5 text-xs text-gray-400">
-            <span className="text-yellow-500 font-bold text-sm">★★★★★</span>
-            <span>Verificado por clínicas</span>
-          </div>
+
         </motion.div>
       </div>
     </section>
