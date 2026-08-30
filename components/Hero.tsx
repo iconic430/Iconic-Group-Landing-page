@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           
           {/* Headline principal (H1) */}
           <h1 className="text-3xl sm:text-5xl md:text-[3.5rem] font-black leading-[1.1] md:leading-[1.15] mb-6 tracking-tighter w-full max-w-5xl text-white">
-            Llenamos tu agenda con pacientes que <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">pagan tratamientos de $20,000 a $200,000 MXN</span> en 30 días.
+            Te conseguimos de <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">6 a 20 pacientes nuevos de $20,000 a $180,000</span> en menos de 60 dias
           </h1>
           
           {/* Subheadline and Bullets */}
@@ -76,13 +76,9 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
               Instalamos el <span className="text-white font-bold">Sistema de Triaje Digital™</span> que filtra curiosos, educa al paciente antes del primer mensaje y agenda <span className="text-cyan-400 font-bold">directamente en tu Google Calendar</span> - sin saturar a tu recepción.
             </p>
             
-            <p className="text-gray-500 text-xs md:text-sm uppercase tracking-wider mb-6">
+            <p className="text-gray-500 text-xs md:text-sm uppercase tracking-wider mb-2">
               Para clínicas dentales establecidas con servicios de implantes, carillas, All-on-4 o prótesis completa.
             </p>
-
-            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-xs md:text-sm text-cyan-300 font-semibold mb-8">
-              <span className="text-white font-black">40 citas extras en 60 dias.</span> Firmado por contrato.
-            </div>
           </div>
 
           {/* Contenedor de Video con Proporción 9:16 Vertical (VSL) */}
@@ -178,7 +174,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
 
           {/* Restricción */}
           <p className="text-gray-500 text-xs tracking-wide max-w-md mb-12">
-            Solo aplicamos a clínicas dentales con tickets desde $15,000 MXN. Atendemos máximo 3 clínicas nuevas por mes.
+            Solo aplicamos a clínicas dentales con tickets desde $25,000 MXN. Atendemos máximo 3 clínicas nuevas por mes.
           </p>
 
           {/* Métricas de confianza debajo del CTA */}

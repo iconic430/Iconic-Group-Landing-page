@@ -89,20 +89,10 @@ export const RealResults: React.FC = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-cyan-500/5 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10 max-w-4xl text-center">
-        {/* Eyebrow */}
-        <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-gray-400 font-semibold mb-3">
-          ALGUNAS DE NUESTRAS CLÍNICAS
-        </p>
-
         {/* Title */}
-        <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mb-4">
-          Clínicas Reales. Resultados Reales.
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-12 max-w-3xl mx-auto">
+          Clínicas que ya tomaron la decisión de trabajar con nosotros
         </h2>
-
-        {/* Subtitle */}
-        <p className="text-gray-400 text-base sm:text-xl max-w-2xl mx-auto mb-12 font-normal leading-relaxed">
-          Nadie en el mercado se atreve a mostrar sus métricas, nosotros nos enorgullecemos.
-        </p>
 
         {/* Testimonial Card */}
         <div className="relative max-w-2xl mx-auto mb-10 px-2 touch-pan-y">
