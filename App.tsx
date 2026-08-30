@@ -3,12 +3,10 @@ import React, { useCallback } from 'react';
 import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
 import { RealResults } from './components/RealResults.tsx';
-import { Solution } from './components/Solution.tsx';
 import { Dependence } from './components/Dependence.tsx';
+import { Objection } from './components/Objection.tsx';
 import { Benefits } from './components/Benefits.tsx';
 import { Founder } from './components/Founder.tsx';
-import { Objection } from './components/Objection.tsx';
-import { Guarantee } from './components/Guarantee.tsx';
 import { FAQ } from './components/FAQ.tsx';
 import { Footer } from './components/Footer.tsx';
 import { motion } from 'framer-motion';
@@ -69,11 +67,9 @@ const App: React.FC = () => {
         <Hero onNavigateForm={navigateToForm} />
         <RealResults />
         <Dependence />
-        <Solution onNavigateForm={navigateToForm} />
-        <Benefits onNavigateForm={navigateToForm} />
         <Objection />
+        <Benefits onNavigateForm={navigateToForm} />
         <Founder onNavigateForm={navigateToForm} />
-        <Guarantee />
         <FAQ />
         
         <Footer onNavigateForm={navigateToForm} onScrollTo={handleScrollTo} />
