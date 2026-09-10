@@ -59,25 +59,19 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto text-center flex flex-col items-center"
         >
-          {/* Pre-header */}
-          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-2xl sm:rounded-full bg-white/5 border border-white/10 text-[8px] sm:text-[9px] md:text-[10px] font-black text-cyan-400 mb-6 uppercase tracking-[0.12em] sm:tracking-[0.2em] backdrop-blur-sm max-w-[90vw] sm:max-w-none">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse flex-shrink-0" />
-            <span className="text-center leading-normal">ESPECIALISTAS EN CLÍNICAS ODONTOLÓGICAS DE ALTO TICKET · MÉXICO</span>
-          </div>
-          
           {/* Headline principal (H1) */}
           <h1 className="text-3xl sm:text-5xl md:text-[3.5rem] font-black leading-[1.1] md:leading-[1.15] mb-6 tracking-tighter w-full max-w-5xl text-white">
-            Te conseguimos de <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">6 a 20 pacientes nuevos de $20,000 a $180,000</span> en menos de 60 dias
+            Las agencias te mandan leads. Nosotros te mandamos <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">pacientes que ya saben cuánto cuesta.</span>
           </h1>
           
           {/* Subheadline and Bullets */}
           <div className="flex flex-col items-center mb-8 w-full max-w-4xl">
             <p className="text-gray-300 font-medium text-base md:text-xl lg:text-2xl mb-6 text-center leading-relaxed">
-              Instalamos el <span className="text-white font-bold">Sistema de Triaje Digital™</span> que filtra curiosos, educa al paciente antes del primer mensaje y agenda <span className="text-cyan-400 font-bold">directamente en tu Google Calendar</span> - sin saturar a tu recepción.
+              4 de cada 5 clínicas que instalan el <span className="text-cyan-400 font-bold">Sistema de Triaje Digital</span> agregan entre <span className="text-white font-bold">$100,000 y $400,000 MXN al mes</span> en menos de 60 días.
             </p>
             
-            <p className="text-gray-500 text-xs md:text-sm uppercase tracking-wider mb-2">
-              Para clínicas dentales establecidas con servicios de implantes, carillas, All-on-4 o prótesis completa.
+            <p className="text-gray-400 text-xs md:text-sm uppercase tracking-wider mb-2 font-medium">
+              Una clínica por tratamiento por ciudad.
             </p>
           </div>
 
