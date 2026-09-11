@@ -67,7 +67,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           {/* Subheadline and Bullets */}
           <div className="flex flex-col items-center mb-8 w-full max-w-4xl">
             <p className="text-gray-300 font-medium text-base md:text-xl lg:text-2xl mb-6 text-center leading-relaxed">
-              4 de cada 5 clínicas que instalan el <span className="text-cyan-400 font-bold">Sistema de Triaje Digital</span> agregan entre <span className="text-white font-bold">$100,000 y $400,000 MXN al mes</span> en menos de 60 días.
+              2 de cada 3 clínicas que instalan el <span className="text-cyan-400 font-bold">Sistema de Triaje Digital</span> agregan entre <span className="text-white font-bold">$100,000 y $300,000 MXN al mes</span> en menos de 60 días.
             </p>
             
             <p className="text-gray-400 text-xs md:text-sm uppercase tracking-wider mb-2 font-medium">

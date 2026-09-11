@@ -15,7 +15,7 @@ export const Dependence: React.FC = () => {
     "IA que filtra a los curiosos antes de que escriban",
     "Cobro de anticipo de consulta antes de pisar la clínica",
     "Posicionamiento de autoridad antes de la cita",
-    "Agenda directa en Google Calendar del dueño"
+    "Agenda directa en Google Calendar de la clínica"
   ];
 
   return (
