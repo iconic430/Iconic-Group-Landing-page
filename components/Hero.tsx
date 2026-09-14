@@ -59,15 +59,23 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           transition={{ duration: 0.8 }}
           className="max-w-7xl mx-auto text-center flex flex-col items-center"
         >
+          {/* Label superior */}
+          <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-xs sm:text-sm font-bold text-cyan-400 mb-6 uppercase tracking-wider backdrop-blur-sm shadow-[0_0_15px_rgba(6,182,212,0.15)]">
+            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse flex-shrink-0" />
+            <span>Exclusivo para clínicas dentales</span>
+          </div>
+
           {/* Headline principal (H1) */}
-          <h1 className="text-3xl sm:text-5xl md:text-[3.5rem] font-black leading-[1.1] md:leading-[1.15] mb-6 tracking-tighter w-full max-w-5xl text-white">
-            Las agencias te mandan leads. Nosotros te mandamos <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">pacientes que ya saben cuánto cuesta.</span>
+          <h1 className="text-3xl sm:text-5xl md:text-[3.35rem] font-black leading-[1.15] md:leading-[1.18] mb-6 tracking-tighter w-full max-w-5xl text-white/90">
+            <span className="underline decoration-cyan-400 decoration-[3px] underline-offset-8 text-white">2 de cada 3 clínicas</span> que instalan el{" "}
+            <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">Sistema de Triaje Digital</span> agregan entre{" "}
+            <span className="text-white font-black drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]">$100,000 y $300,000 MXN al mes</span> en menos de 60 días.
           </h1>
           
           {/* Subheadline and Bullets */}
           <div className="flex flex-col items-center mb-8 w-full max-w-4xl">
-            <p className="text-gray-300 font-medium text-base md:text-xl lg:text-2xl mb-6 text-center leading-relaxed">
-              2 de cada 3 clínicas que instalan el <span className="text-cyan-400 font-bold">Sistema de Triaje Digital</span> agregan entre <span className="text-white font-bold">$100,000 y $300,000 MXN al mes</span> en menos de 60 días.
+            <p className="text-gray-300 font-medium text-base md:text-xl lg:text-2xl mb-4 text-center leading-relaxed">
+              Las agencias te mandan leads. <span className="text-cyan-400 font-bold">Nosotros te mandamos pacientes</span> que ya saben cuánto cuesta.
             </p>
             
             <p className="text-gray-400 text-xs md:text-sm uppercase tracking-wider mb-2 font-medium">
