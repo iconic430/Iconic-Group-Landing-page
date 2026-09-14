@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           {/* Subheadline and Bullets */}
           <div className="flex flex-col items-center mb-8 w-full max-w-4xl">
             <p className="text-gray-300 font-medium text-base md:text-xl lg:text-2xl mb-4 text-center leading-relaxed">
-              Las agencias te mandan leads. <span className="text-cyan-400 font-bold">Nosotros te mandamos pacientes</span> que ya saben cuánto cuesta.
+              Las agencias te mandan leads. <span className="text-cyan-400 font-bold">Nosotros te mandamos pacientes.</span>
             </p>
             
             <p className="text-gray-400 text-xs md:text-sm uppercase tracking-wider mb-2 font-medium">
