@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface HeroProps {
@@ -8,38 +8,53 @@ interface HeroProps {
 
 const clinics = [
   {
-    image: "https://i.postimg.cc/Jn3ZwJYJ/Logo-cli-nica-ontolo-gica-negro-bl-202605242144.jpg",
+    image: "https://i.postimg.cc/c1BJ469q/1.png",
     name: "Clínica 1",
+    location: "México"
+  },
+  {
+    image: "https://i.postimg.cc/Jn3ZwJYJ/Logo-cli-nica-ontolo-gica-negro-bl-202605242144.jpg",
+    name: "Clínica 2",
     location: "CDMX"
   },
   {
+    image: "https://i.postimg.cc/Gh3mBrVr/2.png",
+    name: "Clínica 3",
+    location: "México"
+  },
+  {
     image: "https://i.postimg.cc/cH7wqYk6/Logo-clinic-dental-smile-202605242145.jpg",
-    name: "Clínica 2",
+    name: "Clínica 4",
     location: "Monterrey"
   },
   {
+    image: "https://i.postimg.cc/4N4xKZqf/3.png",
+    name: "Clínica 5",
+    location: "México"
+  },
+  {
     image: "https://i.postimg.cc/FRb3tcCS/Logo-Portal-Dental-Clinic-202605242144.jpg",
-    name: "Clínica 3",
+    name: "Clínica 6",
     location: "Guadalajara"
   },
   {
     image: "https://i.postimg.cc/Dy0J6thC/Insignia-Clinic-logo-design-202605242144.jpg",
-    name: "Clínica 4",
+    name: "Clínica 7",
     location: "Querétaro"
   },
   {
     image: "https://i.postimg.cc/BngvGpJG/logo-de-clinica-dental-202605242149.jpg",
-    name: "Clínica 5",
+    name: "Clínica 8",
     location: "Puebla"
   },
   {
     image: "https://i.postimg.cc/YC3SwRt7/logo-de-clinica-dental-202605242150.jpg",
-    name: "Clínica 6",
+    name: "Clínica 9",
     location: "Mérida"
   },
   {
     image: "https://i.postimg.cc/rwJpLjqX/logo-de-clinica-dental-202605242151.jpg",
-    name: "Clínica 7",
+    name: "Clínica 10",
     location: "Querétaro"
   }
 ];
@@ -47,6 +62,17 @@ const clinics = [
 const duplicatedClinics = [...clinics, ...clinics, ...clinics];
 
 export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
+  useEffect(() => {
+    const scriptId = 'leadconnector-form-embed-script';
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement('script');
+      script.id = scriptId;
+      script.src = 'https://link.msgsndr.com/js/form_embed.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <section className="relative min-h-[95vh] flex items-center pt-28 pb-20 overflow-hidden">
       {/* Subtle Radial Glow behind Hero content */}
@@ -69,17 +95,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           <h1 className="text-3xl sm:text-5xl md:text-[3.35rem] font-black leading-[1.15] md:leading-[1.18] mb-6 tracking-tighter w-full max-w-5xl text-white/90">
             <span className="underline decoration-cyan-400 decoration-[3px] underline-offset-8 text-white">2 de cada 3 clínicas</span> que instalan el{" "}
             <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">Sistema de Triaje Digital</span> agregan entre{" "}
-            <span className="text-white font-black drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]">$100,000 y $300,000 MXN al mes</span> en menos de 60 días.
+            <span className="text-white font-black drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]">$150,000 y $470,000 MXN al mes</span> en menos de 60 días.
           </h1>
           
-          {/* Subheadline and Bullets */}
+          {/* Subheadline */}
           <div className="flex flex-col items-center mb-8 w-full max-w-4xl">
-            <p className="text-gray-300 font-medium text-base md:text-xl lg:text-2xl mb-4 text-center leading-relaxed">
+            <p className="text-gray-300 font-medium text-base md:text-xl lg:text-2xl text-center leading-relaxed">
               Las agencias te mandan leads. <span className="text-cyan-400 font-bold">Nosotros te mandamos pacientes.</span>
-            </p>
-            
-            <p className="text-gray-400 text-xs md:text-sm uppercase tracking-wider mb-2 font-medium">
-              Una clínica por tratamiento por ciudad.
             </p>
           </div>
 
@@ -129,22 +151,22 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             <span className="text-white font-bold">El resultado: dejas de quemar dinero en leads basura, tu equipo cierra tickets altos sin dar descuentos, y tu clínica factura más sin depender de ti</span>
           </p>
 
-          {/* BARRA DE LOGOS DE CLIENTES */}
-          <div className="w-full max-w-5xl mb-12">
-            <p className="text-xs md:text-sm text-gray-500 uppercase tracking-[0.2em] mb-4 text-center">
+          {/* BARRA DE LOGOS DE CLIENTES (DE LADO A LADO EN MÓVIL Y ESCRITORIO) */}
+          <div className="-mx-6 w-[calc(100%+3rem)] md:w-screen md:relative md:left-1/2 md:-translate-x-1/2 md:mx-0 mb-12 overflow-hidden">
+            <p className="text-xs md:text-sm text-gray-500 uppercase tracking-[0.2em] mb-4 text-center px-6">
               Clínicas que ya operan con Iconic Group
             </p>
-            <div className="overflow-hidden relative py-4 select-none">
-              {/* Difuminados en los bordes para transición suave */}
-              <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-10 pointer-events-none" />
-              <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-10 pointer-events-none" />
+            <div className="overflow-hidden relative py-4 select-none w-full">
+              {/* Difuminados sutiles en los bordes para transición suave sin ocultar logos en móvil */}
+              <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-16 md:w-36 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-16 md:w-36 bg-gradient-to-l from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent z-10 pointer-events-none" />
               
               <motion.div
-                className="flex gap-4 md:gap-6 w-max"
+                className="flex gap-3 sm:gap-4 md:gap-6 w-max"
                 animate={{ x: [0, "-33.333%"] }}
                 transition={{
                   ease: "linear",
-                  duration: 20,
+                  duration: 25,
                   repeat: Infinity,
                 }}
               >
@@ -153,7 +175,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
                     key={idx}
                     className="flex-shrink-0 flex items-center justify-center p-1"
                   >
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden relative border border-white/10 hover:border-cyan-500/50 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] bg-[#111]">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden relative border border-white/10 hover:border-cyan-500/50 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.05)] bg-[#111] flex items-center justify-center">
                       <img 
                         src={clinic.image} 
                         alt="Clínica"
@@ -167,19 +189,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             </div>
           </div>
           
-          <button 
-            onClick={onNavigateForm}
-            className="w-full sm:w-auto max-w-[380px] bg-cyan-500 hover:bg-cyan-400 text-black px-8 md:px-10 py-5 md:py-6 rounded-2xl text-lg md:text-2xl font-black transition-all transform hover:scale-105 active:scale-95 glow-brand shadow-2xl shadow-cyan-500/40 leading-tight mb-4"
-          >
-            Quiero ver si mi clínica califica
-          </button>
-
-          {/* Restricción */}
-          <p className="text-gray-500 text-xs tracking-wide max-w-md mb-12">
-            Solo aplicamos a clínicas dentales con tickets desde $25,000 MXN. Atendemos máximo 3 clínicas nuevas por mes.
+          {/* Restricción / Exclusividad */}
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg tracking-wide max-w-2xl mb-10 text-center leading-relaxed">
+            Solo aceptamos a <span className="text-white font-bold">3 clínicas nuevas por mes</span> que hagan <span className="text-white font-bold">diseños de sonrisa</span> o <span className="text-white font-bold">implantes dentales</span> en México.
           </p>
 
-          {/* Métricas de confianza debajo del CTA */}
+          {/* Métricas de confianza */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -207,6 +222,43 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
               </p>
             </div>
           </motion.div>
+
+          {/* Formulario Embed LeadConnector */}
+          <div id="qualification-form" className="w-full max-w-xl md:max-w-2xl mx-auto mt-12 mb-4 relative z-10 scroll-mt-28">
+            <div className="text-center mb-6">
+              <h3 
+                className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-cyan-400 drop-shadow-[0_0_25px_rgba(34,211,238,0.9)] uppercase"
+                style={{ textShadow: '0 0 10px rgba(34,211,238,0.8), 0 0 25px rgba(34,211,238,0.6), 0 0 50px rgba(34,211,238,0.3)' }}
+              >
+                Averigua si calificas
+              </h3>
+            </div>
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/Aj9RYqEazInvOBAy0PhN"
+              style={{
+                width: '100%',
+                height: '100%',
+                minHeight: '582px',
+                border: 'none',
+                borderRadius: '8px'
+              }}
+              id="inline-Aj9RYqEazInvOBAy0PhN"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Form 1"
+              data-height="582"
+              data-layout-iframe-id="inline-Aj9RYqEazInvOBAy0PhN"
+              data-form-id="Aj9RYqEazInvOBAy0PhN"
+              data-cookie-consent="true"
+              data-cookie-consent-provider="auto"
+              title="Form 1"
+            />
+          </div>
 
 
         </motion.div>
