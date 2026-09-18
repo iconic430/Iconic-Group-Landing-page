@@ -144,12 +144,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="flex items-center gap-2 text-[10px] md:text-xs text-gray-500 uppercase tracking-widest mb-10"
           >
-            <span className="text-cyan-500">▶</span> MIRA CÓMO FUNCIONA EL SISTEMA - 3 MIN
+            <span className="text-cyan-500">▶</span> MIRA LO QUE HAREMOS POR TI - 3 MIN
           </motion.div>
-
-          <p className="text-lg md:text-2xl text-gray-400 mb-8 max-w-4xl leading-relaxed px-4 md:px-0">
-            <span className="text-white font-bold">El resultado: dejas de quemar dinero en leads basura, tu equipo cierra tickets altos sin dar descuentos, y tu clínica factura más sin depender de ti</span>
-          </p>
 
           {/* BARRA DE LOGOS DE CLIENTES (DE LADO A LADO EN MÓVIL Y ESCRITORIO) */}
           <div className="-mx-6 w-[calc(100%+3rem)] md:w-screen md:relative md:left-1/2 md:-translate-x-1/2 md:mx-0 mb-12 overflow-hidden">
@@ -188,11 +184,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
               </motion.div>
             </div>
           </div>
-          
-          {/* Restricción / Exclusividad */}
-          <p className="text-gray-400 text-sm sm:text-base md:text-lg tracking-wide max-w-2xl mb-10 text-center leading-relaxed">
-            Solo aceptamos a <span className="text-white font-bold">3 clínicas nuevas por mes</span> que hagan <span className="text-white font-bold">diseños de sonrisa</span> o <span className="text-white font-bold">implantes dentales</span> en México.
-          </p>
 
           {/* Métricas de confianza */}
           <motion.div
@@ -226,11 +217,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateForm }) => {
           {/* Formulario Embed LeadConnector */}
           <div id="qualification-form" className="w-full max-w-xl md:max-w-2xl mx-auto mt-12 mb-4 relative z-10 scroll-mt-28">
             <div className="text-center mb-6">
-              <h3 
-                className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-cyan-400 drop-shadow-[0_0_25px_rgba(34,211,238,0.9)] uppercase"
-                style={{ textShadow: '0 0 10px rgba(34,211,238,0.8), 0 0 25px rgba(34,211,238,0.6), 0 0 50px rgba(34,211,238,0.3)' }}
-              >
-                Averigua si calificas
+              <h3 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white">
+                Averigua si <span className="text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">calificas</span>
               </h3>
             </div>
             <iframe
